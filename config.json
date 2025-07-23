@@ -1,20 +1,17 @@
-{
-  "scheduleInMinutes": 30,
+﻿{
+  "scheduleInSeconds": 15,
   "smtp": {
-    "server": "smtp.example.com",
-    "port": 587,
-    "username": "your_email@example.com",
-    "password": "your_secure_password",
-    "from": "your_email@example.com",
-    "to": ["recipient1@example.com", "recipient2@example.com"]
+    "server": "server",
+    "port": "8080",
+    "username": "dhruvspathak",
+    "password": "password",
+    "from": "noreply-checkmarx.com",
+    "to": ["dhruv.pathak@checkmarx.com"]
   },
-  "apis": [
-    {
-      "name": "MyAPI",
-      "url": "https://api.example.com/data",
-      "headers": {
-        "Authorization": "Bearer your_token_here"
-      }
-    }
-  ]
+  "cxOne": {
+    "region": "ind",
+    "clientId": "new-sudha",
+    "clientSecret": "uilsdgvuidvuij",
+    "tenant": "sudha"
+  }
 }

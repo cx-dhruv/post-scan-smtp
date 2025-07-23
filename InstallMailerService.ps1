@@ -1,12 +1,11 @@
 param (
     [string]$ServiceName = "MailerService",
     [string]$DisplayName = "SMTP Mailer API Service",
-    [string]$Description = "Fetches API data and emails it periodically"
+    [string]$Description = "Monitors Checkmarx scan queue and sends emails"
 )
 
-$exe = "powershell.exe"
 $script = "$PSScriptRoot\MailerWorker.ps1"
-$binPath = "$exe -NoProfile -ExecutionPolicy Bypass -File `"$script`""
+$binPath = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File `"$script`""
 
 sc.exe create $ServiceName binPath= "$binPath" start= auto DisplayName= "$DisplayName"
 sc.exe description $ServiceName "$Description"

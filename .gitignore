@@ -1,0 +1,56 @@
+# ============================
+# Global
+# ============================
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# ============================
+# Windows specific
+# ============================
+*.lnk
+desktop.ini
+
+# ============================
+# Node/npm accidentally added
+# ============================
+node_modules/
+package-lock.json
+npm-debug.log
+
+# ============================
+# VS Code and IDE config
+# ============================
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ============================
+# Python if used in helper scripts
+# ============================
+__pycache__/
+*.pyc
+
+# ============================
+# PowerShell SMTP Mailer specific
+# ============================
+logs/
+.scans/
+config.json
+template.html  # if you want to keep this private/customized
+MailerService.exe  # if compiled in future
+MailerService.exe.config
+MailerService.pdb
+
+# ============================
+# Installer artifacts
+# ============================
+*.msi
+*.msm
+*.cab

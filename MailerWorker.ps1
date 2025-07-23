@@ -1,13 +1,15 @@
-Import-Module -Name "$PSScriptRoot\mailer-core.psm1" -Force
+Import-Module "$PSScriptRoot\mailer-core.psm1" -Force
 $ErrorActionPreference = "Stop"
+
+if (-not (Test-Path ".scans")) { New-Item ".scans" -ItemType Directory }
 
 while ($true) {
     try {
         Invoke-Mailer
     } catch {
-        Log-Activity "Error occurred: $_"
+        Log-Activity -Message "Exception: $_"
     }
 
-    $config = Get-Content -Raw -Path "$PSScriptRoot\config.json" | ConvertFrom-Json
-    Start-Sleep -Seconds ($config.scheduleInMinutes * 60)
+    $config = Get-Content "$PSScriptRoot\config.json" | ConvertFrom-Json
+    Start-Sleep -Seconds 15
 }
