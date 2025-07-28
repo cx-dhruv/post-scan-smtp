@@ -6,29 +6,36 @@ function Set-SecureSecret {
         [Parameter(Mandatory)][string]$Key,
         [Parameter(Mandatory)][string]$Secret
     )
-    cmd /c "cmdkey /generic:$Key /user:$Key /pass:$Secret"
+    if (-not $Secret) {
+        Write-Host "Error: Secret for key $Key is empty or null."
+        throw "Secret for key $Key cannot be empty."
+    }
+
+    $secureSecret = $Secret | ConvertTo-SecureString -AsPlainText -Force
+    $credential = New-Object PSCredential ($Key, $secureSecret)
+    $filePath = "$env:APPDATA\SecureSecrets\$Key.cred"
+
+    if (-not (Test-Path "$env:APPDATA\SecureSecrets")) {
+        New-Item -ItemType Directory -Path "$env:APPDATA\SecureSecrets" | Out-Null
+    }
+
+    $credential | Export-CliXml -Path $filePath -Force
+    Write-Host "Secret stored successfully for key: $Key"
 }
 
 function Get-SecureSecret {
     [CmdletBinding()] param(
         [Parameter(Mandatory)][string]$Key
     )
-    Write-Host "Attempting to retrieve secret for key: $Key"
-    $creds = cmd /c "cmdkey /list:$Key" 2>$null
-    if ($LASTEXITCODE) {
-        Write-Host "Error: Secret $Key not found. Command output: $creds"
-        throw "Secret $Key not found"
+    $filePath = "$env:APPDATA\SecureSecrets\$Key.cred"
+
+    if (-not (Test-Path $filePath)) {
+        Write-Host "Error: Secret $Key not found."
+        throw "Secret $Key not found. Ensure the credential is stored correctly using Set-SecureSecret."
     }
 
-    $passwordLine = $creds -split "`r?`n" | Where-Object { $_ -match "Password:" }
-    if (-not $passwordLine) {
-        Write-Host "Error: Password line not found for key $Key. Command output: $creds"
-        throw "Password not found for key $Key"
-    }
-
-    $password = ($passwordLine -split "Password:")[1].Trim()
-    Write-Host "Secret retrieved successfully for key: $Key"
-    return $password
+    $credential = Import-CliXml -Path $filePath
+    $credential.GetNetworkCredential().Password
 }
 
 Export-ModuleMember -Function *-SecureSecret

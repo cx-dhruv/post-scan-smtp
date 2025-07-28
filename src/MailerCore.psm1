@@ -86,23 +86,66 @@ function Get-EncodedTemplate {
     $template
 }
 
+function Get-CxScanDetails {
+    param($Config, $Token, $ScanId)
+    Write-Log "Fetching scan details for Scan ID: $ScanId"
+    $headers = @{Authorization = "Bearer $Token"; Accept = "application/json; version=1.0"}
+    $uri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans/$ScanId"
+    Write-Log "Request URI: $uri"
+    try {
+        $details = Invoke-RestMethod -Uri $uri -Headers $headers
+        Write-Log "Scan details fetched successfully. Response: $(ConvertTo-Json $details -Depth 3)"
+        return $details
+    } catch {
+        Write-Log "Failed to fetch scan details for Scan ID: $ScanId. Error: $_.Exception.Message"
+        Write-Log "Stack Trace: $_.Exception.StackTrace"
+        throw
+    }
+}
+
+function Get-CxScanSummary {
+    param($Config, $Token, $ScanId)
+    Write-Log "Fetching scan summary for Scan ID: $ScanId"
+    $headers = @{Authorization = "Bearer $Token"; Accept = "application/json; version=1.0"}
+    $uri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans/$ScanId/summary"
+    Write-Log "Request URI: $uri"
+    try {
+        $summary = Invoke-RestMethod -Uri $uri -Headers $headers
+        Write-Log "Scan summary fetched successfully. Response: $(ConvertTo-Json $summary -Depth 3)"
+        return $summary
+    } catch {
+        Write-Log "Failed to fetch scan summary for Scan ID: $ScanId. Error: $_.Exception.Message"
+        Write-Log "Stack Trace: $_.Exception.StackTrace"
+        throw
+    }
+}
+
 function Invoke-Mailer {
     param($Config)
-    $token   = New-CxAccessToken $Config
-    $scans   = Get-CxCompletedScans $Config $token
+    Write-Log "Starting mailer invocation."
+    $token = New-CxAccessToken $Config
+    $scans = Get-CxCompletedScans $Config $token
     foreach ($scan in $scans) {
-        $details = Get-CxScanDetails $Config $token $scan.id
-        $summary = Get-CxScanSummary $Config $token $scan.id
-        $body    = Get-EncodedTemplate "$PSScriptRoot\..\templates\notification_template.html" @{
-            Project   = $details.projectName
-            Status    = $scan.status
-            RiskScore = $summary.riskScore
-            Summary   = ($summary.statistics | ConvertTo-Json -Compress)
-            ScanLink  = "https://$($Config.cxOne.region).ast.checkmarx.net/projects/$($details.projectId)/scans/$($scan.id)"
-            TimeUtc   = (Get-Date).ToUniversalTime().ToString("u")
+        try {
+            Write-Log "Processing Scan ID: $($scan.id)"
+            $details = Get-CxScanDetails $Config $token $scan.id
+            $summary = Get-CxScanSummary $Config $token $scan.id
+            $body = Get-EncodedTemplate "$PSScriptRoot\..\templates\notification_template.html" @{
+                Project   = $details.projectName
+                Status    = $scan.status
+                RiskScore = $summary.riskScore
+                Summary   = ($summary.statistics | ConvertTo-Json -Compress)
+                ScanLink  = "https://$($Config.cxOne.region).ast.checkmarx.net/projects/$($details.projectId)/scans/$($scan.id)"
+                TimeUtc   = (Get-Date).ToUniversalTime().ToString("u")
+            }
+            Send-SecureMail $Config "Checkmarx scan $($scan.id) completed" $body
+            New-Item -ItemType File -Path "$env:ProgramData\CxMailer\.done\$($scan.id)" -Force | Out-Null
+            Write-Log "Scan ID: $($scan.id) processed successfully."
+        } catch {
+            Write-Log "Error processing Scan ID: $($scan.id). Error: $_.Exception.Message"
+            Write-Log "Stack Trace: $_.Exception.StackTrace"
         }
-        Send-SecureMail $Config "Checkmarx scan $($scan.id) completed" $body
-        New-Item -ItemType File -Path "$env:ProgramData\CxMailer\.done\$($scan.id)" -Force | Out-Null
     }
+    Write-Log "Mailer invocation completed."
 }
 Export-ModuleMember -Function Invoke-Mailer
