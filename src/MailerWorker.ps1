@@ -1,5 +1,6 @@
 param(
-    [string]$ConfigPath = "$PSScriptRoot\..\config\config.json"
+    [string]$ConfigPath = "$PSScriptRoot\..\config\config.json",
+    [switch]$TestMode
 )
 
 Import-Module "$PSScriptRoot\MailerCore.psm1" -Force
@@ -11,6 +12,17 @@ $source   = $cfg.logging.eventLogSource
 
 if (-not [System.Diagnostics.EventLog]::SourceExists($source)) {
     New-EventLog -LogName Application -Source $source
+}
+
+if ($TestMode) {
+    Write-Host "Running in test mode."
+    try {
+        Invoke-Mailer $cfg
+        Write-Host "Test mode execution completed."
+    } catch {
+        Write-Host "Error during test mode execution: $_"
+    }
+    exit
 }
 
 while ($true) {

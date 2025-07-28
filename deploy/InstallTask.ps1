@@ -13,6 +13,8 @@ Write-Output "Scheduled task '$TaskName' created."
 
 #Run pwsh .\src\InstallConfiguration.ps1 to configure tenant, region, client-id, and client-secret.
 
+#Run pwsh .\src\MailerWorker.ps1 -TestMode to run in test mode without scheduling.
+
 #Execute pwsh .\deploy\InstallTask.ps1 to register the always-on scheduled task.
 
 #Verify events in Windows Event Viewer → Application under source CxMailer.

@@ -13,13 +13,22 @@ function Get-SecureSecret {
     [CmdletBinding()] param(
         [Parameter(Mandatory)][string]$Key
     )
+    Write-Host "Attempting to retrieve secret for key: $Key"
     $creds = cmd /c "cmdkey /list:$Key" 2>$null
-    if ($LASTEXITCODE) { throw "Secret $Key not found" }
+    if ($LASTEXITCODE) {
+        Write-Host "Error: Secret $Key not found. Command output: $creds"
+        throw "Secret $Key not found"
+    }
 
     $passwordLine = $creds -split "`r?`n" | Where-Object { $_ -match "Password:" }
-    if (-not $passwordLine) { throw "Password not found for key $Key" }
+    if (-not $passwordLine) {
+        Write-Host "Error: Password line not found for key $Key. Command output: $creds"
+        throw "Password not found for key $Key"
+    }
 
-    return ($passwordLine -split "Password:")[1].Trim()
+    $password = ($passwordLine -split "Password:")[1].Trim()
+    Write-Host "Secret retrieved successfully for key: $Key"
+    return $password
 }
 
 Export-ModuleMember -Function *-SecureSecret

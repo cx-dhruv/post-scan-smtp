@@ -19,12 +19,15 @@ function New-CxAccessToken {
         grant_type    = "client_credentials"
     }
     $uri = "https://$($Config.cxOne.region).iam.checkmarx.net/auth/realms/$($Config.cxOne.tenant)/protocol/openid-connect/token"
+    Write-Log "Request URI: $uri"
+    Write-Log "Request Body: $(ConvertTo-Json $body -Depth 3)"
     try {
         $response = Invoke-RestMethod -Uri $uri -Method Post -Body $body -ContentType "application/x-www-form-urlencoded"
-        Write-Log "Access token retrieved successfully."
+        Write-Log "Access token retrieved successfully. Response: $(ConvertTo-Json $response -Depth 3)"
         $response.access_token
     } catch {
-        Write-Log "Failed to retrieve access token: $_"
+        Write-Log "Failed to retrieve access token. Error: $_.Exception.Message"
+        Write-Log "Stack Trace: $_.Exception.StackTrace"
         throw
     }
 }
@@ -34,13 +37,16 @@ function Get-CxCompletedScans {
     Write-Log "Fetching completed scans."
     $headers = @{Authorization = "Bearer $Token"; Accept = "application/json; version=1.0"}
     $uri  = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans?limit=1000"
+    Write-Log "Request URI: $uri"
+    Write-Log "Request Headers: $(ConvertTo-Json $headers -Depth 3)"
     try {
         $scans = Invoke-RestMethod -Uri $uri -Headers $headers
-        Write-Log "Completed scans fetched successfully. Count: $($scans.scans.Count)"
+        Write-Log "Completed scans fetched successfully. Response: $(ConvertTo-Json $scans -Depth 3)"
         $scans.scans |
             Where-Object { $_.status -in "Completed","Partial","Failed" }
     } catch {
-        Write-Log "Failed to fetch completed scans: $_"
+        Write-Log "Failed to fetch completed scans. Error: $_.Exception.Message"
+        Write-Log "Stack Trace: $_.Exception.StackTrace"
         throw
     }
 }
