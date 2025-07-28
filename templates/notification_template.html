@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Checkmarx Scan Complete</title>
+  <style>body{font-family:Segoe UI,Arial}</style>
+</head>
+<body>
+  <h2>Checkmarx Scan Completed</h2>
+  <p><strong>Project:</strong> {{Project}}</p>
+  <p><strong>Status:</strong> {{Status}}</p>
+  <p><strong>Total Risk Score:</strong> {{RiskScore}}</p>
+  <p><strong>Findings:</strong><br/>{{Summary}}</p>
+  <p><a href="{{ScanLink}}">Open Full Report</a></p>
+  <hr/>
+  <small>Notification generated {{TimeUtc}}</small>
+</body>
+</html>

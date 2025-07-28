@@ -1,0 +1,151 @@
+using namespace System.Web
+Import-Module "$PSScriptRoot\..\config\SecureConfig.psm1" -Force
+
+function Write-Log {
+    param(
+        [string]$Message,
+        [string]$LogFile = "$PSScriptRoot\..\logs\service.log"
+    )
+    $timestamp = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
+    "$timestamp - $Message" | Out-File -FilePath $LogFile -Append -Encoding utf8
+}
+
+function New-CxAccessToken {
+    param($Config)
+    Write-Log "Requesting new access token for tenant: $($Config.cxOne.tenant)"
+    $body = @{
+        client_id     = (Get-SecureSecret "$($Config.cxOne.tenant)-clientId")
+        client_secret = (Get-SecureSecret "$($Config.cxOne.tenant)-clientSecret")
+        grant_type    = "client_credentials"
+    }
+    $uri = "https://$($Config.cxOne.region).iam.checkmarx.net/auth/realms/$($Config.cxOne.tenant)/protocol/openid-connect/token"
+    Write-Log "Request URI: $uri"
+    Write-Log "Request Body: $(ConvertTo-Json $body -Depth 3)"
+    try {
+        $response = Invoke-RestMethod -Uri $uri -Method Post -Body $body -ContentType "application/x-www-form-urlencoded"
+        Write-Log "Access token retrieved successfully. Response: $(ConvertTo-Json $response -Depth 3)"
+        $response.access_token
+    } catch {
+        Write-Log "Failed to retrieve access token. Error: $_.Exception.Message"
+        Write-Log "Stack Trace: $_.Exception.StackTrace"
+        throw
+    }
+}
+
+function Get-CxCompletedScans {
+    param($Config,$Token)
+    Write-Log "Fetching completed scans."
+    $headers = @{Authorization = "Bearer $Token"; Accept = "application/json; version=1.0"}
+    $uri  = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans?limit=1000"
+    Write-Log "Request URI: $uri"
+    Write-Log "Request Headers: $(ConvertTo-Json $headers -Depth 3)"
+    try {
+        $scans = Invoke-RestMethod -Uri $uri -Headers $headers
+        Write-Log "Completed scans fetched successfully. Response: $(ConvertTo-Json $scans -Depth 3)"
+        $scans.scans |
+            Where-Object { $_.status -in "Completed","Partial","Failed" }
+    } catch {
+        Write-Log "Failed to fetch completed scans. Error: $_.Exception.Message"
+        Write-Log "Stack Trace: $_.Exception.StackTrace"
+        throw
+    }
+}
+
+function Send-SecureMail {
+    param($Config,$Subject,$BodyHtml)
+    Write-Log "Sending email with subject: $Subject"
+    $Config.smtp.server = "smtp.office365.com"
+    $Config.smtp.port   = 587
+    $smtpCred = New-Object PSCredential (
+        (Get-SecureSecret "smtp-username"),
+        (ConvertTo-SecureString (Get-SecureSecret "smtp-password") -AsPlainText -Force)
+    )
+    try {
+        Send-MailMessage -SmtpServer $Config.smtp.server `
+                         -Port $Config.smtp.port `
+                         -UseSsl `
+                         -Credential $smtpCred `
+                         -From $Config.smtp.from `
+                         -To (Get-Content "$PSScriptRoot\..\config\recipients.txt") `
+                         -Subject $Subject `
+                         -BodyAsHtml $BodyHtml -Encoding UTF8
+        Write-Log "Email sent successfully."
+    } catch {
+        Write-Log "Failed to send email: $_"
+        throw
+    }
+}
+
+function Get-EncodedTemplate {
+    param($Path,$Map)
+    $template = Get-Content -Raw -Path $Path
+    foreach ($k in $Map.Keys) {
+        $val = [HttpUtility]::HtmlEncode($Map[$k])
+        $template = $template -replace "\{\{$k\}\}", $val
+    }
+    $template
+}
+
+function Get-CxScanDetails {
+    param($Config, $Token, $ScanId)
+    Write-Log "Fetching scan details for Scan ID: $ScanId"
+    $headers = @{Authorization = "Bearer $Token"; Accept = "application/json; version=1.0"}
+    $uri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans/$ScanId"
+    Write-Log "Request URI: $uri"
+    try {
+        $details = Invoke-RestMethod -Uri $uri -Headers $headers
+        Write-Log "Scan details fetched successfully. Response: $(ConvertTo-Json $details -Depth 3)"
+        return $details
+    } catch {
+        Write-Log "Failed to fetch scan details for Scan ID: $ScanId. Error: $_.Exception.Message"
+        Write-Log "Stack Trace: $_.Exception.StackTrace"
+        throw
+    }
+}
+
+function Get-CxScanSummary {
+    param($Config, $Token, $ScanId)
+    Write-Log "Fetching scan summary for Scan ID: $ScanId"
+    $headers = @{Authorization = "Bearer $Token"; Accept = "application/json; version=1.0"}
+    $uri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans/$ScanId/summary"
+    Write-Log "Request URI: $uri"
+    try {
+        $summary = Invoke-RestMethod -Uri $uri -Headers $headers
+        Write-Log "Scan summary fetched successfully. Response: $(ConvertTo-Json $summary -Depth 3)"
+        return $summary
+    } catch {
+        Write-Log "Failed to fetch scan summary for Scan ID: $ScanId. Error: $_.Exception.Message"
+        Write-Log "Stack Trace: $_.Exception.StackTrace"
+        throw
+    }
+}
+
+function Invoke-Mailer {
+    param($Config)
+    Write-Log "Starting mailer invocation."
+    $token = New-CxAccessToken $Config
+    $scans = Get-CxCompletedScans $Config $token
+    foreach ($scan in $scans) {
+        try {
+            Write-Log "Processing Scan ID: $($scan.id)"
+            $details = Get-CxScanDetails $Config $token $scan.id
+            $summary = Get-CxScanSummary $Config $token $scan.id
+            $body = Get-EncodedTemplate "$PSScriptRoot\..\templates\notification_template.html" @{
+                Project   = $details.projectName
+                Status    = $scan.status
+                RiskScore = $summary.riskScore
+                Summary   = ($summary.statistics | ConvertTo-Json -Compress)
+                ScanLink  = "https://$($Config.cxOne.region).ast.checkmarx.net/projects/$($details.projectId)/scans/$($scan.id)"
+                TimeUtc   = (Get-Date).ToUniversalTime().ToString("u")
+            }
+            Send-SecureMail $Config "Checkmarx scan $($scan.id) completed" $body
+            New-Item -ItemType File -Path "$env:ProgramData\CxMailer\.done\$($scan.id)" -Force | Out-Null
+            Write-Log "Scan ID: $($scan.id) processed successfully."
+        } catch {
+            Write-Log "Error processing Scan ID: $($scan.id). Error: $_.Exception.Message"
+            Write-Log "Stack Trace: $_.Exception.StackTrace"
+        }
+    }
+    Write-Log "Mailer invocation completed."
+}
+Export-ModuleMember -Function Invoke-Mailer
