@@ -1,3 +1,6 @@
+# InstallTask.ps1
+# This script creates a scheduled task to run the MailerWorker script at system startup.
+
 param(
     [string]$TaskName = "CxMailer",
     [string]$Interval = "PT15S"
@@ -8,7 +11,7 @@ schtasks /Create /TN $TaskName /SC ONSTART /TR "$cmd" /RL HIGHEST /F
 Write-Output "Scheduled task '$TaskName' created."
 
 
-#Run pwsh .\src\InstallConfiguration.ps1 once to store secrets and generate config.json.
+#Run pwsh .\src\InstallConfiguration.ps1 to configure tenant, region, client-id, and client-secret.
 
 #Execute pwsh .\deploy\InstallTask.ps1 to register the always-on scheduled task.
 
