@@ -2,13 +2,13 @@
     "$schema": "https://json.schemastore.org/appsettings.json",
     "scheduleInSeconds": 15,
     "smtp": {
-      "server": "smtp.example.com",
+      "server": "smtp.gmail.com",
       "port": 587,
-      "from": "noreply@example.com"
+      "from": "pathak.dhruv03@gmail.com"
     },
     "cxOne": {
       "region": "ind",
-      "tenant": "example-tenant"
+      "tenant": "sudha"
     },
     "logging": {
       "eventLogSource": "CxMailer"

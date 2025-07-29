@@ -5,17 +5,20 @@ $config   = Get-Content -Raw -Path $cfgPath | ConvertFrom-Json
 Write-Host "`n=== SMTP Settings ==="
 $useDefaultSmtp = Read-Host "Use default SMTP settings? (y/n)"
 if ($useDefaultSmtp -eq 'y') {
-    # Preconfigured SMTP settings for outlook.com
-    $config.smtp.server = "smtp.office365.com"
+    # Preconfigured SMTP settings for Gmail
+    $config.smtp.server = "smtp.gmail.com"
     $config.smtp.port   = 587
-    Set-SecureSecret "smtp-username" (Read-Host "Outlook SMTP username")
-    Set-SecureSecret "smtp-password" (Read-Host "Outlook SMTP password" -AsSecureString | ConvertFrom-SecureString)
+    $config.smtp.username = $config.smtp.username
+    $config.smtp.password = $config.smtp.password
 } else {
     $config.smtp.server = Read-Host "SMTP server address"
     $config.smtp.port   = [int](Read-Host "SMTP server port")
-    Set-SecureSecret "smtp-username" (Read-Host "SMTP username")
-    Set-SecureSecret "smtp-password" (Read-Host "SMTP password" -AsSecureString | ConvertFrom-SecureString)
+    $config.smtp.username = Read-Host "SMTP username"
+    $config.smtp.password = Read-Host "SMTP password" -AsSecureString | ConvertFrom-SecureString
 }
+
+Set-SecureSecret "smtp-username" $config.smtp.username
+Set-SecureSecret "smtp-password" $config.smtp.password
 
 Write-Host "`n=== Checkmarx Credentials ==="
 $config.cxOne.region  = Read-Host "Region code (ind/eu/eu-2/na/us-2/anz/sng/mea...)" -Default $config.cxOne.region
