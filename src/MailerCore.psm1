@@ -52,14 +52,14 @@ function Get-CxCompletedScans {
 }
 
 function Send-SecureMail {
-    param($Config,$Subject,$BodyHtml)
+    param($Config, $Subject, $BodyHtml)
     Write-Log "Sending email with subject: $Subject"
-    $Config.smtp.server = "smtp.office365.com"
-    $Config.smtp.port   = 587
+
     $smtpCred = New-Object PSCredential (
-        (Get-SecureSecret "smtp-username"),
-        (ConvertTo-SecureString (Get-SecureSecret "smtp-password") -AsPlainText -Force)
+        [System.Environment]::GetEnvironmentVariable("SMTP_USERNAME"),
+        (ConvertTo-SecureString [System.Environment]::GetEnvironmentVariable("SMTP_PASSWORD") -AsPlainText -Force)
     )
+
     try {
         Send-MailMessage -SmtpServer $Config.smtp.server `
                          -Port $Config.smtp.port `

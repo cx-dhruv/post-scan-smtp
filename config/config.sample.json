@@ -1,17 +1,18 @@
 {
-    "$schema": "https://json.schemastore.org/appsettings.json",
-    "scheduleInSeconds": 15,
-    "smtp": {
-      "server": "smtp.example.com",
-      "port": 587,
-      "from": "noreply@example.com"
-    },
-    "cxOne": {
-      "region": "ind",
-      "tenant": "example-tenant"
-    },
-    "logging": {
-      "eventLogSource": "CxMailer"
-    }
+  "$schema": "https://json.schemastore.org/appsettings.json",
+  "scheduleInSeconds": 15,
+  "smtp": {
+    "server": "smtp.gmail.com",
+    "port": 587,
+    "from": "pathak.dhruv03@gmail.com",
+    "username": "pathak.dhruv03@gmail.com",
+    "password": "your-app-password"
+  },
+  "cxOne": {
+    "region": "ind",
+    "tenant": "sudha"
+  },
+  "logging": {
+    "eventLogSource": "CxMailer"
   }
-  
+}

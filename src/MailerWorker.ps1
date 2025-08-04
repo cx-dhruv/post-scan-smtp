@@ -4,6 +4,8 @@ param(
 )
 
 Import-Module "$PSScriptRoot\MailerCore.psm1" -Force
+Load-DotEnv "$PSScriptRoot\..\config\.env"
+
 $ErrorActionPreference = 'Stop'
 
 $cfg      = Get-Content -Raw -Path $ConfigPath | ConvertFrom-Json
