@@ -6,6 +6,7 @@
 *.bak
 *.swp
 *.DS_Store
+*.env
 Thumbs.db
 
 # ============================

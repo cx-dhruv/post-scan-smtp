@@ -38,4 +38,21 @@ function Get-SecureSecret {
     $credential.GetNetworkCredential().Password
 }
 
-Export-ModuleMember -Function *-SecureSecret
+function Load-DotEnv {
+    param([string]$FilePath = "$PSScriptRoot\..\.env")
+
+    if (-Not (Test-Path $FilePath)) {
+        Write-Host "Error: .env file not found at $FilePath"
+        return
+    }
+
+    Get-Content $FilePath | ForEach-Object {
+        if ($_ -match "^\s*([^#][^=]+)=(.+)$") {
+            $name = $matches[1].Trim()
+            $value = $matches[2].Trim()
+            [System.Environment]::SetEnvironmentVariable($name, $value, "Process")
+        }
+    }
+}
+
+Export-ModuleMember -Function *-SecureSecret, Load-DotEnv
