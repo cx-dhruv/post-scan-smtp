@@ -44,7 +44,7 @@ if (-not $config.cxOne) {
 
 # Load .env if present
 if (Test-Path $envPath) {
-    Load-DotEnv $envPath
+    Use-EnvFile $envPath
 }
 else {
     Write-Host "No .env found at $envPath, proceeding with prompts."
@@ -78,6 +78,13 @@ if (-not [string]::IsNullOrWhiteSpace($config.smtp.password)) {
 }
 else {
     Write-Host "SMTP password is missing."
+}
+
+if (-not [string]::IsNullOrWhiteSpace($config.smtp.server)) {
+    Set-SecureSecret "smtp-server" $config.smtp.server
+} else {
+    Write-Host "SMTP server is missing. Please configure it."
+    throw "SMTP server is missing."
 }
 
 Write-Host "`n=== Checkmarx Credentials ==="

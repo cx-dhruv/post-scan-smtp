@@ -4,7 +4,8 @@ param(
 )
 
 Import-Module "$PSScriptRoot\MailerCore.psm1" -Force
-Load-DotEnv "$PSScriptRoot\..\config\.env"
+Import-Module "$PSScriptRoot\..\config\SecureConfig.psm1" -Force
+Use-EnvFile "$PSScriptRoot\..\config\.env"
 
 $ErrorActionPreference = 'Stop'
 
