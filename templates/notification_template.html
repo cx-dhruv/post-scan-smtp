@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <title>Checkmarx Scan Complete</title>
-  <style>body{font-family:Segoe UI,Arial}</style>
-  <script>
-    if (window.top !== window.self) {
-        window.top.location = window.self.location;
-    }
-  </script>
-</head>
-<body>
-  <h2>Checkmarx Scan Completed</h2>
-  <p><strong>Project:</strong> {{Project}}</p>
-  <p><strong>Status:</strong> {{Status}}</p>
-  <p><strong>Total Risk Score:</strong> {{RiskScore}}</p>
-  <p><strong>Findings:</strong><br/>{{Summary}}</p>
-  <p><a href="{{ScanLink}}">Open Full Report</a></p>
-  <hr/>
-  <small>Notification generated {{TimeUtc}}</small>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Checkmarx Scan Complete</title>
+    <style>
+      body {
+        font-family: Segoe UI, Arial;
+      }
+    </style>
+    <script type="text/javascript">
+      if (window.top !== window.self) {
+        try {
+          window.top.location = window.self.location;
+        } catch (e) {
+          document.body.innerHTML =
+            "<h1>Clickjacking protection: This page cannot be displayed in a frame.</h1>";
+        }
+      }
+    </script>
+    <noscript>
+      <h1>
+        Clickjacking protection: This page cannot be displayed in a frame.
+      </h1>
+    </noscript>
+  </head>
+  <body>
+    <h2>Checkmarx Scan Completed</h2>
+    <p><strong>Project:</strong> {{Project}}</p>
+    <p><strong>Status:</strong> {{Status}}</p>
+    <p><strong>Total Risk Score:</strong> {{RiskScore}}</p>
+    <p><strong>Findings:</strong><br />{{Summary}}</p>
+    <p><a href="{{ScanLink}}">Open Full Report</a></p>
+    <hr />
+    <small>Notification generated {{TimeUtc}}</small>
+  </body>
 </html>
