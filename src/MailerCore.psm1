@@ -10,6 +10,28 @@ function Write-Log {
     "$timestamp - $Message" | Out-File -FilePath $LogFile -Append -Encoding utf8
 }
 
+function Get-LastProcessedTimestamp {
+    $stateFile = "$env:ProgramData\CxMailer\last_processed.txt"
+    if (Test-Path $stateFile -PathType Leaf) {
+        try {
+            return [DateTime]::ParseExact((Get-Content -Path $stateFile -Raw).Trim(), "yyyy-MM-ddTHH:mm:ss.ffffffZ", $null)
+        }
+        catch {
+            Write-Log "Warning: Invalid timestamp format in state file. Defaulting to 7 days ago."
+        }
+    }
+    return (Get-Date).AddDays(-7)
+}
+
+function Set-LastProcessedTimestamp {
+    param([DateTime]$Time)
+    $stateDir  = "$env:ProgramData\CxMailer"
+    $stateFile = "$stateDir\last_processed.txt"
+    if (-not (Test-Path $stateDir)) { New-Item -ItemType Directory -Path $stateDir -Force | Out-Null }
+    $Time.ToString("yyyy-MM-ddTHH:mm:ss.ffffffZ") | Out-File -FilePath $stateFile -Encoding utf8 -Force
+}
+# ======================
+
 function New-CxAccessToken {
     param($Config)
     Write-Log "Requesting new access token for tenant: $($Config.cxOne.tenant)"
@@ -32,15 +54,29 @@ function New-CxAccessToken {
 }
 
 function Get-CxCompletedScans {
-    param($Config, $Token)
-    Write-Log "Fetching list of scans."
+    param($Config, $Token, [DateTime]$FromDate)
+    Write-Log "Fetching list of completed scans with query parameters."
     $headers = @{Authorization = "Bearer $Token"; Accept = "application/json; version=1.0" }
-    $uri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans/"
+    
+    $statuses = "Failed,Completed,Partial"
+    if (-not $FromDate) { $FromDate = (Get-Date).AddDays(-1) }
+    
+    $queryParams = @{
+        statuses    = $statuses
+        'from-date' = $FromDate.ToString("yyyy-MM-ddTHH:mm:ss.ffffffZ")
+    }
+
+    $baseUri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans/"
+    $uri = $baseUri + "?" + (
+        $queryParams.GetEnumerator() |
+        ForEach-Object { "$($_.Key)=$([System.Web.HttpUtility]::UrlEncode($_.Value))" } |
+        Join-String -Separator "&"
+    )
+
     try {
         $scans = Invoke-RestMethod -Uri $uri -Headers $headers
-        Write-Log "List of scans fetched successfully"
-        $scans.scans |
-        Where-Object { $_.status -in "Completed", "Partial", "Failed" }
+        Write-Log "List of completed scans fetched successfully using query parameters"
+        return $scans.scans
     }
     catch {
         Write-Log "Failed to fetch list of scans. Error: $_.Exception.Message"
@@ -112,22 +148,39 @@ function Get-CxScanDetails {
 function Invoke-Mailer {
     param($Config)
     Write-Log "Starting mailer invocation."
+
+    # Obtain access token
     $token = New-CxAccessToken $Config
-    $scans = Get-CxCompletedScans $Config $token
+
+    # Determine the starting point for the query
+    $fromDate = Get-LastProcessedTimestamp
+    Write-Log "Last processed timestamp: $fromDate"
+
+    # Fetch only the scans that are newer than the last processed timestamp
+    $scans = Get-CxCompletedScans $Config $token $fromDate
+
+    $processed = @()
     foreach ($scan in $scans) {
         try {
             Write-Log "Processing Scan ID: $($scan.id)"
             $details = Get-CxScanDetails $Config $token $scan.id
+            Write-Log "risk score: $($details.riskScore)"
+            Write-Log "Scan Summary: $($details.statistics | ConvertTo-Json -Compress)"
+
             $body = Get-EncodedTemplate "$PSScriptRoot\..\templates\notification_template.html" @{
                 Project   = $details.projectName
                 Status    = $scan.status
                 RiskScore = $details.riskScore
                 Summary   = ($details.statistics | ConvertTo-Json -Compress)
-                ScanLink  = "https://$($Config.cxOne.region).ast.checkmarx.net/projects/$($details.projectId)/scans/$($scan.id)"
                 TimeUtc   = (Get-Date).ToUniversalTime().ToString("u")
             }
+
             Send-SecureMail $Config "Checkmarx scan $($scan.id) completed" $body
+            
+            # Optional legacy marker file (kept for backwards-compat)
             New-Item -ItemType File -Path "$env:ProgramData\CxMailer\.done\$($scan.id)" -Force | Out-Null
+
+            $processed += $scan
             Write-Log "Scan ID: $($scan.id) processed successfully."
         }
         catch {
@@ -135,6 +188,24 @@ function Invoke-Mailer {
             Write-Log "Stack Trace: $_.Exception.StackTrace"
         }
     }
+
+    # Update the last-processed timestamp only if we handled scans successfully
+    if ($processed.Count -gt 0) {
+        $latestDate = $null
+        foreach ($scan in $processed) {
+            $candidate = $null
+            if ($scan.finishedOn)      { $candidate = [datetime]$scan.finishedOn }
+            elseif ($scan.created)     { $candidate = [datetime]$scan.created }
+            elseif ($scan.date)        { $candidate = [datetime]$scan.date }
+            if ($candidate -and (-not $latestDate -or $candidate -gt $latestDate)) {
+                $latestDate = $candidate
+            }
+        }
+        if (-not $latestDate) { $latestDate = Get-Date }
+        Set-LastProcessedTimestamp $latestDate
+        Write-Log "Updated last processed timestamp to $latestDate"
+    }
+
     Write-Log "Mailer invocation completed."
 }
 Export-ModuleMember -Function Invoke-Mailer
