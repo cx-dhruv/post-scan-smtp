@@ -38,12 +38,12 @@ function Get-SecureSecret {
     $credential.GetNetworkCredential().Password
 }
 
-function Load-DotEnv {
+function Use-EnvFile {
     param([string]$FilePath = "$PSScriptRoot\..\.env")
 
-    if (-Not (Test-Path $FilePath)) {
-        Write-Host "Error: .env file not found at $FilePath"
-        return
+    if (-not (Test-Path $FilePath)) {
+        Write-Log "Error: .env file not found at $FilePath"
+        throw "Error: .env file not found at $FilePath"
     }
 
     Get-Content $FilePath | ForEach-Object {
@@ -55,4 +55,4 @@ function Load-DotEnv {
     }
 }
 
-Export-ModuleMember -Function *-SecureSecret, Load-DotEnv
+Export-ModuleMember -Function *-SecureSecret, Use-EnvFile
