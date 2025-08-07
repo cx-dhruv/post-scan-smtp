@@ -45,6 +45,7 @@ __pycache__/
 logs/
 .scans/
 config.json
+config.sample.json
 template.html  # if you want to keep this private/customized
 MailerService.exe  # if compiled in future
 MailerService.exe.config
