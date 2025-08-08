@@ -2,7 +2,7 @@ Import-Module "$PSScriptRoot\..\config\SecureConfig.psm1" -Force -DisableNameChe
 
 $configPath = "$PSScriptRoot\..\config\config.json"
 $sampleConfigPath = "$PSScriptRoot\..\config\config.sample.json"
-$envPath = "$PSScriptRoot\..\.env"
+$envPath = "$PSScriptRoot\..\config\.env"
 
 # Load config.json if valid, else use sample
 if (Test-Path $configPath -PathType Leaf) {

@@ -1,17 +1,72 @@
 using namespace System.Web
 Import-Module "$PSScriptRoot\..\config\SecureConfig.psm1" -Force
 
+# Globals for token caching
+$Global:CxAccessToken = $null
+$Global:CxTokenFetchedAt = $null
+
 function Write-Log {
     param(
         [string]$Message,
         [string]$LogFile = "$PSScriptRoot\..\logs\service.log"
     )
+    if (-not (Test-Path (Split-Path $LogFile -Parent))) { New-Item -ItemType Directory -Path (Split-Path $LogFile -Parent) -Force | Out-Null }
     $timestamp = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
     "$timestamp - $Message" | Out-File -FilePath $LogFile -Append -Encoding utf8
 }
 
+function Get-LastProcessedTimestamp {
+    $stateFile = "$env:ProgramData\CxMailer\last_processed.txt"
+    if (Test-Path $stateFile -PathType Leaf) {
+        try {
+            $rawTs = (Get-Content -Path $stateFile -Raw).Trim()
+            if ([string]::IsNullOrWhiteSpace($rawTs)) { throw "empty" }
+            $parsed = [DateTime]::ParseExact($rawTs, "yyyy-MM-ddTHH:mm:ss.ffffffZ", $null)
+            $lastProcessed = [DateTime]::SpecifyKind($parsed, [DateTimeKind]::Utc)
+
+            Write-Log "Last processed timestamp (stored UTC): $($lastProcessed.ToString('yyyy-MM-ddTHH:mm:ss.ffffffZ'))"
+            Write-Log "Last processed timestamp (local): $($lastProcessed.ToLocalTime().ToString('yyyy-MM-dd HH:mm:ss'))"
+
+            # Guard against future timestamps (clock skew)
+            if ($lastProcessed -gt [DateTime]::UtcNow) {
+                Write-Log "Warning: Stored timestamp is ahead of current time. Resetting to current UTC.";
+                $lastProcessed = [DateTime]::UtcNow
+                Set-LastProcessedTimestamp $lastProcessed
+            }
+            return $lastProcessed
+        }
+        catch {
+            Write-Log "Warning: Invalid timestamp format in state file (will use fallback). Error: $($_.Exception.Message)"
+        }
+    }
+
+    $fallback = ([DateTime]::UtcNow).AddDays(-1)
+    Write-Log "Using fallback last-processed timestamp (UTC): $($fallback.ToString('yyyy-MM-ddTHH:mm:ss.ffffffZ')) - persisting it for future runs"
+    Set-LastProcessedTimestamp $fallback
+    return $fallback
+}
+
+function Set-LastProcessedTimestamp {
+    param([DateTime]$Time)
+    $stateDir = "$env:ProgramData\CxMailer"
+    $stateFile = "$stateDir\last_processed.txt"
+    if (-not (Test-Path $stateDir)) { New-Item -ItemType Directory -Path $stateDir -Force | Out-Null }
+
+    $utcTime = if ($Time.Kind -ne [DateTimeKind]::Utc) { $Time.ToUniversalTime() } else { $Time }
+    $utcTime.ToString("yyyy-MM-ddTHH:mm:ss.ffffffZ") | Out-File -FilePath $stateFile -Encoding utf8 -Force
+
+    Write-Log "Saved last processed timestamp (UTC): $($utcTime.ToString('yyyy-MM-ddTHH:mm:ss.ffffffZ'))"
+    Write-Log "Saved last processed timestamp (local): $($utcTime.ToLocalTime().ToString('yyyy-MM-dd HH:mm:ss'))"
+}
+
 function New-CxAccessToken {
     param($Config)
+
+    if ($Global:CxAccessToken -and $Global:CxTokenFetchedAt -and ((Get-Date) - $Global:CxTokenFetchedAt).TotalMinutes -lt 29) {
+        Write-Log "Reusing cached access token."
+        return $Global:CxAccessToken
+    }
+
     Write-Log "Requesting new access token for tenant: $($Config.cxOne.tenant)"
     $body = @{
         client_id     = (Get-SecureSecret "$($Config.cxOne.tenant)-clientId")
@@ -21,30 +76,65 @@ function New-CxAccessToken {
     $uri = "https://$($Config.cxOne.region).iam.checkmarx.net/auth/realms/$($Config.cxOne.tenant)/protocol/openid-connect/token"
     try {
         $response = Invoke-RestMethod -Uri $uri -Method Post -Body $body -ContentType "application/x-www-form-urlencoded"
-        Write-Log "Access token retrieved successfully"
-        $response.access_token
+        if (-not $response.access_token) { throw "No access_token in token response" }
+        $Global:CxAccessToken = $response.access_token
+        $Global:CxTokenFetchedAt = Get-Date
+        Write-Log "Access token retrieved successfully at $($Global:CxTokenFetchedAt.ToString('yyyy-MM-dd HH:mm:ss'))"
+        return $Global:CxAccessToken
     }
     catch {
-        Write-Log "Failed to retrieve access token. Error: $_.Exception.Message"
-        Write-Log "Stack Trace: $_.Exception.StackTrace"
+        Write-Log "Failed to retrieve access token. Error: $($_.Exception.Message)"
         throw
     }
 }
 
 function Get-CxCompletedScans {
-    param($Config, $Token)
-    Write-Log "Fetching list of scans."
-    $headers = @{Authorization = "Bearer $Token"; Accept = "application/json; version=1.0" }
-    $uri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans/"
+    param($Config, $Token, [DateTime]$FromDate)
+
+    Write-Log "Queried API is called."
+    $headers = @{ Authorization = "Bearer $Token"; Accept = "application/json; version=1.0" }
+    $statuses = "Failed,Completed,Partial"
+
+    if (-not $FromDate) { $FromDate = ([DateTime]::UtcNow).AddDays(-1) }
+    if ($FromDate.Kind -ne [DateTimeKind]::Utc) { $FromDate = $FromDate.ToUniversalTime() }
+    #if ($FromDate -gt [DateTime]::UtcNow) { $FromDate = [DateTime]::UtcNow }
+
+    $fromDateStr = $FromDate.ToString("yyyy-MM-ddTHH:mm:ss.ffffffZ")
+    $queryString = "statuses=$statuses&from-date=$fromDateStr"
+    $uri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans?$queryString"
+
     try {
-        $scans = Invoke-RestMethod -Uri $uri -Headers $headers
-        Write-Log "List of scans fetched successfully"
-        $scans.scans |
-        Where-Object { $_.status -in "Completed", "Partial", "Failed" }
+        Write-Log "DEBUG: API call using from-date (UTC): $fromDateStr"
+        Write-Log "DEBUG: full URI = $uri"
+
+        $raw = Invoke-RestMethod -Uri $uri -Headers $headers -TimeoutSec 30
+
+        if ($null -eq $raw) { return @() }
+        if ($raw -is [array]) { $scans = $raw }
+        elseif ($raw.scans -is [array]) { $scans = $raw.scans }
+        else { $scans = @() }
+
+        Write-Log "List of completed scans fetched successfully. Count: $($scans.Count)"
+        return $scans
     }
     catch {
-        Write-Log "Failed to fetch list of scans. Error: $_.Exception.Message"
-        Write-Log "Stack Trace: $_.Exception.StackTrace"
+        Write-Log "Failed to fetch list of scans. Error: $($_.Exception.Message)"
+        throw
+    }
+}
+
+function Get-CxScanDetails {
+    param($Config, $Token, $ScanId)
+    Write-Log "Fetching scan details for Scan ID: $ScanId."
+    $headers = @{ Authorization = "Bearer $Token"; Accept = "application/json; version=1.0" }
+    $uri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans/$ScanId"
+    try {
+        $details = Invoke-RestMethod -Uri $uri -Headers $headers
+        Write-Log "Scan details fetched successfully for $ScanId"
+        return $details
+    }
+    catch {
+        Write-Log "Failed to fetch scan details for $ScanId. Error: $($_.Exception.Message)"
         throw
     }
 }
@@ -59,25 +149,28 @@ function Send-SecureMail {
         throw "SMTP server is not configured."
     }
 
-    $smtpCred = New-Object PSCredential (
-        (Get-SecureSecret "smtp-username"),
-        (Get-SecureSecret "smtp-password" | ConvertTo-SecureString -AsPlainText -Force)
-    )
-
     try {
+        $username = Get-SecureSecret "smtp-username"
+        $passwordPlain = Get-SecureSecret "smtp-password"
+        $securePassword = $passwordPlain | ConvertTo-SecureString -AsPlainText -Force
+        $smtpCred = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
+
+        $recipients = Get-Content "$PSScriptRoot\..\config\recipients.txt" -ErrorAction SilentlyContinue
+        if (-not $recipients) { Write-Log "Warning: No recipients found in recipients.txt"; $recipients = @() }
+
         Send-MailMessage -SmtpServer $smtpServer `
             -Port $Config.smtp.port `
             -UseSsl `
             -Credential $smtpCred `
             -From $Config.smtp.from `
-            -To (Get-Content "$PSScriptRoot\..\config\recipients.txt") `
+            -To $recipients `
             -Subject $Subject `
             -BodyAsHtml $BodyHtml -Encoding UTF8
+
         Write-Log "Email sent successfully."
     }
     catch {
-        Write-Log "Failed to send email: $_.Exception.Message"
-        Write-Log "Stack Trace: $_.Exception.StackTrace"
+        Write-Log "Failed to send email: $($_.Exception.Message)"
         throw
     }
 }
@@ -89,52 +182,76 @@ function Get-EncodedTemplate {
         $val = [HttpUtility]::HtmlEncode($Map[$k])
         $template = $template -replace "\{\{$k\}\}", $val
     }
-    $template
-}
-
-function Get-CxScanDetails {
-    param($Config, $Token, $ScanId)
-    Write-Log "Fetching scan details for Scan ID: $ScanId."
-    $headers = @{Authorization = "Bearer $Token"; Accept = "application/json; version=1.0" }
-    $uri = "https://$($Config.cxOne.region).ast.checkmarx.net/api/scans/$ScanId"
-    try {
-        $details = Invoke-RestMethod -Uri $uri -Headers $headers
-        Write-Log "Scan details fetched successfully"
-        $details
-    }
-    catch {
-        Write-Log "Failed to fetch scan details. Error: $_.Exception.Message"
-        Write-Log "Stack Trace: $_.Exception.StackTrace"
-        throw
-    }
+    return $template
 }
 
 function Invoke-Mailer {
     param($Config)
     Write-Log "Starting mailer invocation."
+
     $token = New-CxAccessToken $Config
-    $scans = Get-CxCompletedScans $Config $token
+    # Load persisted timestamp once per process and reuse until we actually advance it
+    if (-not $script:StableFromDate) {
+        $script:StableFromDate = Get-LastProcessedTimestamp
+    }
+    $fromDateUtc = $script:StableFromDate
+    Write-Log "Using from-date (UTC): $($fromDateUtc.ToString('yyyy-MM-ddTHH:mm:ss.ffffffZ'))"
+    Write-Log "Using from-date (Local): $($fromDateUtc.ToLocalTime().ToString('yyyy-MM-dd HH:mm:ss'))"
+
+    $scans = Get-CxCompletedScans $Config $token $fromDateUtc
+    $scanCount = $scans.Count
+    Write-Log "Scans fetched successfully. Count: $scanCount"
+
+    if ($scanCount -eq 0) {
+        Write-Log "No scans found from API. Timestamp will remain unchanged."
+        return
+    }
+
+    $processed = @()
     foreach ($scan in $scans) {
         try {
             Write-Log "Processing Scan ID: $($scan.id)"
             $details = Get-CxScanDetails $Config $token $scan.id
+
+            $localNow = (Get-Date).ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss")
             $body = Get-EncodedTemplate "$PSScriptRoot\..\templates\notification_template.html" @{
                 Project   = $details.projectName
                 Status    = $scan.status
                 RiskScore = $details.riskScore
                 Summary   = ($details.statistics | ConvertTo-Json -Compress)
-                ScanLink  = "https://$($Config.cxOne.region).ast.checkmarx.net/projects/$($details.projectId)/scans/$($scan.id)"
-                TimeUtc   = (Get-Date).ToUniversalTime().ToString("u")
+                TimeUtc   = $localNow
             }
+
             Send-SecureMail $Config "Checkmarx scan $($scan.id) completed" $body
-            New-Item -ItemType File -Path "$env:ProgramData\CxMailer\.done\$($scan.id)" -Force | Out-Null
+            $processed += $scan
             Write-Log "Scan ID: $($scan.id) processed successfully."
         }
         catch {
-            Write-Log "Error processing Scan ID: $($scan.id). Error: $_.Exception.Message"
-            Write-Log "Stack Trace: $_.Exception.StackTrace"
+            Write-Log "Error processing Scan ID: $($scan.id). Error: $($_.Exception.Message)"
         }
     }
+
+    # Update timestamp based on all scans returned (not just successfully processed)
+    if ($scans.Count -gt 0) {
+        # advance the in-memory stable timestamp and persist it
+        $latestDate = $scans | ForEach-Object {
+            if ($_.finishedOn) { [DateTime]$_.finishedOn }
+            elseif ($_.created) { [DateTime]$_.created }
+            elseif ($_.date) { [DateTime]$_.date }
+        } | Where-Object { $_ -ne $null } | Sort-Object -Descending | Select-Object -First 1
+
+        if (-not $latestDate) { $latestDate = [DateTime]::UtcNow }
+        $utcToSave = if ($latestDate.Kind -ne [DateTimeKind]::Utc) { $latestDate.ToUniversalTime() } else { $latestDate }
+        if ($utcToSave -gt [DateTime]::UtcNow) { $utcToSave = [DateTime]::UtcNow }
+
+        Write-Log "Latest scan time (UTC to save): $($utcToSave.ToString('yyyy-MM-ddTHH:mm:ss.ffffffZ'))"
+        Write-Log "Latest scan time (local): $($utcToSave.ToLocalTime().ToString('yyyy-MM-dd HH:mm:ss'))"
+
+        $script:StableFromDate = $utcToSave
+        Set-LastProcessedTimestamp $utcToSave
+    }
+
     Write-Log "Mailer invocation completed."
 }
+
 Export-ModuleMember -Function Invoke-Mailer
