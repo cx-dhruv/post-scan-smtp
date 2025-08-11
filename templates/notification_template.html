@@ -1,3 +1,9 @@
+<!--
+  NOTE: This file is used as an email template.
+  It is not served via HTTP or exposed in a browser.
+  Clickjacking mitigation headers are not applicable.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,8 +36,7 @@
     <p><strong>Status:</strong> {{Status}}</p>
     <p><strong>Total Risk Score:</strong> {{RiskScore}}</p>
     <p><strong>Findings:</strong><br />{{Summary}}</p>
-    <p><a href="{{ScanLink}}">Open Full Report</a></p>
     <hr />
-    <small>Notification generated {{TimeUtc}}</small>
+    <h6>Notification generated {{TimeUtc}}</h6>
   </body>
 </html>
