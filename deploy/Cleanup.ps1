@@ -43,4 +43,26 @@ if ([System.Diagnostics.EventLog]::SourceExists("CxMailer")) {
     }
 }
 
+Write-Host "=== Removing CxMailer credentials and state files ==="
+# Remove system-wide credentials (new location)
+$systemCredPath = "$env:ProgramData\CxMailer\Secrets"
+if (Test-Path $systemCredPath) {
+    Remove-Item -Path $systemCredPath -Recurse -Force
+    Write-Host "Removed system credentials from $systemCredPath"
+}
+
+# Remove user-specific credentials (old location)
+$userCredPath = "$env:APPDATA\SecureSecrets"
+if (Test-Path $userCredPath) {
+    Remove-Item -Path $userCredPath -Recurse -Force
+    Write-Host "Removed user credentials from $userCredPath"
+}
+
+# Remove state files
+$stateDir = "$env:ProgramData\CxMailer"
+if (Test-Path $stateDir) {
+    Remove-Item -Path $stateDir -Recurse -Force
+    Write-Host "Removed state directory from $stateDir"
+}
+
 Write-Host "=== Cleanup complete ==="

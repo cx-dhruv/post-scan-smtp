@@ -1,13 +1,48 @@
 param(
-    [string]$ConfigPath = "$PSScriptRoot\..\config\config.json",
+    [string]$ConfigPath,
     [switch]$TestMode
 )
 
-Import-Module "$PSScriptRoot\MailerCore.psm1" -Force
-Import-Module "$PSScriptRoot\..\config\SecureConfig.psm1" -Force
-Use-EnvFile "$PSScriptRoot\..\config\.env"
+# Get the directory of this script reliably
+$scriptDir = if ($PSScriptRoot) {
+    $PSScriptRoot
+} else {
+    $scriptPath = $MyInvocation.MyCommand.Path
+    if ($scriptPath) {
+        Split-Path -Parent $scriptPath
+    } else {
+        # Use working directory as fallback
+        "$PWD\src"
+    }
+}
+
+# Import modules with explicit paths
+$mailerCorePath = "$scriptDir\MailerCore.psm1"
+
+if (-not (Test-Path $mailerCorePath)) {
+    Write-Host "ERROR: MailerCore module not found at: $mailerCorePath"
+    throw "Cannot find MailerCore module"
+}
+
+Import-Module $mailerCorePath -Force
+
+# Only load .env if it exists (optional file)
+$envFile = "$scriptDir\..\config\.env"
+if (Test-Path $envFile) {
+    Use-EnvFile $envFile
+}
 
 $ErrorActionPreference = 'Stop'
+
+# Set default ConfigPath if not provided
+if (-not $ConfigPath) {
+    $ConfigPath = "$scriptDir\..\config\config.json"
+}
+
+if (-not (Test-Path $ConfigPath)) {
+    Write-Host "ERROR: Config file not found at: $ConfigPath"
+    throw "Cannot find config file"
+}
 
 $cfg      = Get-Content -Raw -Path $ConfigPath | ConvertFrom-Json
 $interval = [int]$cfg.scheduleInSeconds

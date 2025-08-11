@@ -113,7 +113,17 @@ else {
 
 $config | ConvertTo-Json -Depth 5 | Out-File $configPath -Encoding utf8
 
-Write-Host "Enter recipient addresses (comma-separated): "
-(Read-Host) -split ',' | Out-File "$PSScriptRoot\..\config\recipients.txt" -Encoding utf8
+Write-Host "`nEnter recipient email addresses (comma-separated): "
+$recipients = Read-Host
+if ($recipients) {
+    $recipients -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne '' } | Out-File "$PSScriptRoot\..\config\recipients.txt" -Encoding utf8
+    Write-Host "Recipients saved to config\recipients.txt"
+} else {
+    Write-Host "Warning: No recipients configured. You'll need to add them to config\recipients.txt manually."
+}
 
-Write-Host "Configuration complete."
+Write-Host "`nConfiguration complete!" -ForegroundColor Green
+Write-Host "`nIMPORTANT: If running as a service under SYSTEM account:" -ForegroundColor Yellow
+Write-Host "  1. Run as Administrator: pwsh .\deploy\TestAsSystem.ps1"
+Write-Host "  2. This will verify SYSTEM can access the credentials"
+Write-Host "  3. If the test fails, re-run this configuration as Administrator"

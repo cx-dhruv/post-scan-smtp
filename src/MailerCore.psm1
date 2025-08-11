@@ -1,5 +1,66 @@
 using namespace System.Web
-Import-Module "$PSScriptRoot\..\config\SecureConfig.psm1" -Force
+
+# Embed SecureConfig functions directly to avoid module loading issues
+$script:SecretBasePath = "$env:ProgramData\CxMailer\Secrets"
+
+function Get-SecureSecret {
+    [CmdletBinding()] param(
+        [Parameter(Mandatory)][string]$Key
+    )
+    
+    $filePath = "$script:SecretBasePath\$Key.txt"
+
+    if (-not (Test-Path $filePath)) {
+        Write-Log "Error: Secret $Key not found at $filePath"
+        throw "Secret $Key not found. Ensure the credential is stored correctly using Set-SecureSecret."
+    }
+
+    try {
+        # Read encrypted string from file
+        $encryptedString = Get-Content -Path $filePath -Raw
+        
+        # Convert back to secure string using machine key, then to plain text
+        $secureString = ConvertTo-SecureString -String $encryptedString -Key (Get-MachineKey)
+        $credential = New-Object System.Management.Automation.PSCredential ("dummy", $secureString)
+        
+        return $credential.GetNetworkCredential().Password
+    }
+    catch {
+        Write-Log "Error reading secret ${Key}: $($_.Exception.Message)"
+        throw
+    }
+}
+
+function Get-MachineKey {
+    # Generate a consistent key based on machine-specific information
+    # This allows any user on this machine to encrypt/decrypt
+    $machineGuid = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Cryptography" -Name MachineGuid).MachineGuid
+    $bytes = [System.Text.Encoding]::UTF8.GetBytes($machineGuid)
+    
+    # Create a 256-bit key (32 bytes) from the machine GUID
+    $sha256 = [System.Security.Cryptography.SHA256]::Create()
+    $hash = $sha256.ComputeHash($bytes)
+    $sha256.Dispose()
+    
+    return $hash
+}
+
+function Use-EnvFile {
+    param([string]$FilePath)
+
+    if (-not (Test-Path $FilePath)) {
+        Write-Log "Info: .env file not found at $FilePath"
+        return
+    }
+
+    Get-Content $FilePath | ForEach-Object {
+        if ($_ -match "^\s*([^#][^=]+)=(.+)$") {
+            $name = $matches[1].Trim()
+            $value = $matches[2].Trim()
+            [System.Environment]::SetEnvironmentVariable($name, $value, "Process")
+        }
+    }
+}
 
 # Globals for token caching
 $Global:CxAccessToken = $null
