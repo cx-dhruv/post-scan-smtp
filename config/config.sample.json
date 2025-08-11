@@ -3,10 +3,10 @@
   "scheduleInSeconds": 15,
   "smtp": {
     "server": "smtp.gmail.com",
-    "port": 587,
+    "port": "587",
     "from": "pathak.dhruv03@gmail.com",
     "username": "pathak.dhruv03@gmail.com",
-    "password": "your-app-password"
+    "password": "bwqhpqkgpzcbuzgv"
   },
   "cxOne": {
     "region": "ind",
