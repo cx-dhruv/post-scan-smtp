@@ -270,10 +270,6 @@ You can customize the repository URL, license type, and other project-specific d
 - Test with different Checkmarx ONE configurations
 - Update documentation for new features
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - Built for Checkmarx ONE integration
@@ -286,6 +282,9 @@ For issues, questions, or contributions:
 - Open an issue on GitHub
 - Check existing issues before creating new ones
 - Provide logs and error messages when reporting problems
+- Mail the creators: 
+dhruv.pathak@checkmarx.com
+bhawani.singh@checkmarx.com
 
 ---
 
