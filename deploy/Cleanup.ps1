@@ -1,4 +1,4 @@
-# CxMailer Full Cleanup Script
+# CxMailer Full Cleanup Script 
 
 Write-Host "=== Stopping running CxMailer processes ==="
 Get-Process powershell, pwsh -ErrorAction SilentlyContinue |

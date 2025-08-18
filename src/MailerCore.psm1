@@ -1,9 +1,15 @@
 using namespace System.Web
 
+# Module for core CxMailer functionality
+# Handles secure credential storage, Checkmarx API integration, and email notifications
+
 # Embed SecureConfig functions directly to avoid module loading issues
+# This ensures the service can access credentials even when running as SYSTEM account
 $script:SecretBasePath = "$env:ProgramData\CxMailer\Secrets"
 
 function Get-SecureSecret {
+    # Retrieves encrypted credentials stored using machine-level DPAPI protection
+    # Only processes running on this specific machine can decrypt these secrets
     [CmdletBinding()] param(
         [Parameter(Mandatory)][string]$Key
     )
@@ -19,7 +25,8 @@ function Get-SecureSecret {
         # Read encrypted string from file
         $encryptedString = Get-Content -Path $filePath -Raw
         
-        # Convert back to secure string using machine key, then to plain text
+        # Convert back to secure string using machine key derived from registry GUID
+        # This ensures only this machine can decrypt the credentials
         $secureString = ConvertTo-SecureString -String $encryptedString -Key (Get-MachineKey)
         $credential = New-Object System.Management.Automation.PSCredential ("dummy", $secureString)
         
@@ -62,7 +69,8 @@ function Use-EnvFile {
     }
 }
 
-# Globals for token caching
+# Global token caching to minimize API calls and improve performance
+# Tokens are valid for 30 minutes, we refresh at 29 minutes
 $Global:CxAccessToken = $null
 $Global:CxTokenFetchedAt = $null
 
@@ -77,17 +85,21 @@ function Write-Log {
 }
 
 function Get-LastProcessedTimestamp {
+    # Retrieves the last scan timestamp to avoid reprocessing old scans
+    # Uses UTC to handle timezone differences and daylight saving time
     $stateFile = "$env:ProgramData\CxMailer\last_processed.txt"
     if (Test-Path $stateFile -PathType Leaf) {
         try {
             $rawTs = (Get-Content -Path $stateFile -Raw).Trim()
             if ([string]::IsNullOrWhiteSpace($rawTs)) { throw "empty" }
+            # Parse timestamp in strict ISO 8601 format with microseconds
             $parsed = [DateTime]::ParseExact($rawTs, "yyyy-MM-ddTHH:mm:ss.ffffffZ", $null)
             $lastProcessed = [DateTime]::SpecifyKind($parsed, [DateTimeKind]::Utc)
 
             Write-Log "Last processed timestamp (stored UTC): $($lastProcessed.ToString('yyyy-MM-ddTHH:mm:ss.ffffffZ'))"
             Write-Log "Last processed timestamp (local): $($lastProcessed.ToLocalTime().ToString('yyyy-MM-dd HH:mm:ss'))"
 
+            # Sanity check: prevent future timestamps due to clock drift
             if ($lastProcessed -gt [DateTime]::UtcNow) {
                 Write-Log "Warning: Stored timestamp is ahead of current time. Resetting to current UTC.";
                 $lastProcessed = [DateTime]::UtcNow
@@ -100,6 +112,8 @@ function Get-LastProcessedTimestamp {
         }
     }
 
+    # Default to 24 hours ago if no valid timestamp exists
+    # This ensures we don't miss recent scans on first run
     $fallback = ([DateTime]::UtcNow).AddDays(-1)
     Write-Log "Using fallback last-processed timestamp (UTC): $($fallback.ToString('yyyy-MM-ddTHH:mm:ss.ffffffZ')) - persisting it for future runs"
     Set-LastProcessedTimestamp $fallback
@@ -121,6 +135,8 @@ function Set-LastProcessedTimestamp {
 
 # --- New Scan ID Tracking Functions ---
 function Get-SeenScanIds {
+    # Maintains a list of processed scan IDs to prevent duplicate notifications
+    # This is crucial because the API might return overlapping results
     $seenFile = "$env:ProgramData\CxMailer\seen_scans.txt"
     if (Test-Path $seenFile -PathType Leaf) {
         try {
@@ -129,6 +145,7 @@ function Get-SeenScanIds {
                 Write-Log "Seen scans file is empty, returning empty set"
                 return @{}
             }
+            # Use hashtable for O(1) lookup performance
             $seenIds = @{}
             $content -split "`r?`n" | Where-Object { $_ -ne "" } | ForEach-Object {
                 $seenIds[$_.Trim()] = $true
@@ -305,35 +322,53 @@ function Get-EncodedTemplate {
 }
 
 function Invoke-Mailer {
+    # Main orchestration function that polls Checkmarx API and sends notifications
+    # Called repeatedly by the worker script based on configured interval
     param($Config)
     Write-Log "Starting mailer invocation."
+    
+    # Get or refresh OAuth token for Checkmarx API access
     $token = New-CxAccessToken $Config
-    #Janitor -DaysToKeep 7
+    
+    # Load list of already-processed scans to avoid duplicates
     $seenScanIds = Get-SeenScanIds
+    
+    # Use stable timestamp across the entire invocation to prevent edge cases
     if (-not $script:StableFromDate) {
         $script:StableFromDate = Get-LastProcessedTimestamp
     }
     $fromDateUtc = $script:StableFromDate
     Write-Log "Using from-date (UTC): $($fromDateUtc.ToString('yyyy-MM-ddTHH:mm:ss.ffffffZ'))"
     Write-Log "Using from-date (Local): $($fromDateUtc.ToLocalTime().ToString('yyyy-MM-dd HH:mm:ss'))"
+    
+    # Query Checkmarx API for completed scans since last check
     $scans = Get-CxCompletedScans $Config $token $fromDateUtc
     $scanCount = $scans.Count
     Write-Log "Scans fetched successfully. Count: $scanCount"
+    
     if ($scanCount -eq 0) {
         Write-Log "No scans found from API. Timestamp will remain unchanged."
         return
     }
+    
+    # Process each scan individually to ensure partial success on errors
     $processed = @()
     $skippedCount = 0
     foreach ($scan in $scans) {
         try {
+            # Skip if already processed (prevents duplicate emails)
             if (Test-ScanIdSeen -ScanId $scan.id -SeenIds $seenScanIds) {
                 Write-Log "Skipping Scan ID: $($scan.id) - already processed"
                 $skippedCount++
                 continue
             }
+            
             Write-Log "Processing Scan ID: $($scan.id)"
+            
+            # Fetch detailed scan information including vulnerability statistics
             $details = Get-CxScanDetails $Config $token $scan.id
+            
+            # Generate HTML email body from template with XSS-safe encoding
             $localNow = (Get-Date).ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss")
             $body = Get-EncodedTemplate "$PSScriptRoot\..\templates\notification_template.html" @{
                 Project   = $details.projectName
@@ -342,28 +377,44 @@ function Invoke-Mailer {
                 Summary   = ($details.statistics | ConvertTo-Json -Compress)
                 TimeUtc   = $localNow
             }
+            
+            # Send notification email to all configured recipients
             Send-SecureMail $Config "Checkmarx scan $($scan.id) completed" $body
+            
+            # Mark scan as processed to prevent future duplicate notifications
             Add-SeenScanId -ScanId $scan.id
             $seenScanIds[$scan.id] = $true
             $processed += $scan
+            
             Write-Log "Scan ID: $($scan.id) processed successfully."
         }
         catch {
+            # Continue processing other scans even if one fails
             Write-Log "Error processing Scan ID: $($scan.id). Error: $($_.Exception.Message)"
         }
     }
+    
     Write-Log "Processed $($processed.Count) new scans, skipped $skippedCount already seen scans"
+    
+    # Update timestamp to the latest scan's completion time for next poll
     if ($scans.Count -gt 0) {
         $latestDate = $scans | ForEach-Object {
+            # Try multiple date fields as API might vary
             if ($_.finishedOn) { [DateTime]$_.finishedOn }
             elseif ($_.created) { [DateTime]$_.created }
             elseif ($_.date) { [DateTime]$_.date }
         } | Where-Object { $_ -ne $null } | Sort-Object -Descending | Select-Object -First 1
+        
         if (-not $latestDate) { $latestDate = [DateTime]::UtcNow }
+        
+        # Ensure UTC and prevent future timestamps
         $utcToSave = if ($latestDate.Kind -ne [DateTimeKind]::Utc) { $latestDate.ToUniversalTime() } else { $latestDate }
         if ($utcToSave -gt [DateTime]::UtcNow) { $utcToSave = [DateTime]::UtcNow }
+        
         Write-Log "Latest scan time (UTC to save): $($utcToSave.ToString('yyyy-MM-ddTHH:mm:ss.ffffffZ'))"
         Write-Log "Latest scan time (local): $($utcToSave.ToLocalTime().ToString('yyyy-MM-dd HH:mm:ss'))"
+        
+        # Persist for next invocation
         $script:StableFromDate = $utcToSave
         Set-LastProcessedTimestamp $utcToSave
     }
