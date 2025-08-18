@@ -1,369 +1,1112 @@
-﻿2025-08-11 17:36:41 - Starting mailer invocation.
-2025-08-11 17:36:41 - Requesting new access token for tenant: sudha
-2025-08-11 17:37:46 - Starting mailer invocation.
-2025-08-11 17:37:46 - Requesting new access token for tenant: sudha
-2025-08-11 17:38:51 - Starting mailer invocation.
-2025-08-11 17:38:51 - Requesting new access token for tenant: sudha
-2025-08-11 17:39:56 - Starting mailer invocation.
-2025-08-11 17:39:56 - Requesting new access token for tenant: sudha
-2025-08-11 17:41:01 - Starting mailer invocation.
-2025-08-11 17:41:01 - Requesting new access token for tenant: sudha
-2025-08-11 17:42:06 - Starting mailer invocation.
-2025-08-11 17:42:06 - Requesting new access token for tenant: sudha
-2025-08-11 17:43:11 - Starting mailer invocation.
-2025-08-11 17:43:11 - Requesting new access token for tenant: sudha
-2025-08-11 17:44:16 - Starting mailer invocation.
-2025-08-11 17:44:16 - Requesting new access token for tenant: sudha
-2025-08-11 17:45:21 - Starting mailer invocation.
-2025-08-11 17:45:21 - Requesting new access token for tenant: sudha
-2025-08-11 17:46:26 - Starting mailer invocation.
-2025-08-11 17:46:26 - Requesting new access token for tenant: sudha
-2025-08-11 17:47:31 - Starting mailer invocation.
-2025-08-11 17:47:31 - Requesting new access token for tenant: sudha
-2025-08-11 17:48:36 - Starting mailer invocation.
-2025-08-11 17:48:36 - Requesting new access token for tenant: sudha
-2025-08-11 17:49:41 - Starting mailer invocation.
-2025-08-11 17:49:41 - Requesting new access token for tenant: sudha
-2025-08-11 17:50:47 - Starting mailer invocation.
-2025-08-11 17:50:47 - Requesting new access token for tenant: sudha
-2025-08-11 17:51:52 - Starting mailer invocation.
-2025-08-11 17:51:52 - Requesting new access token for tenant: sudha
-2025-08-11 17:52:57 - Starting mailer invocation.
-2025-08-11 17:52:57 - Requesting new access token for tenant: sudha
-2025-08-11 17:54:02 - Starting mailer invocation.
-2025-08-11 17:54:02 - Requesting new access token for tenant: sudha
-2025-08-11 17:55:07 - Starting mailer invocation.
-2025-08-11 17:55:07 - Requesting new access token for tenant: sudha
-2025-08-11 17:56:12 - Starting mailer invocation.
-2025-08-11 17:56:12 - Requesting new access token for tenant: sudha
-2025-08-11 17:57:17 - Starting mailer invocation.
-2025-08-11 17:57:17 - Requesting new access token for tenant: sudha
-2025-08-11 17:58:22 - Starting mailer invocation.
-2025-08-11 17:58:22 - Requesting new access token for tenant: sudha
-2025-08-11 17:59:27 - Starting mailer invocation.
-2025-08-11 17:59:27 - Requesting new access token for tenant: sudha
-2025-08-11 18:00:32 - Starting mailer invocation.
-2025-08-11 18:00:32 - Requesting new access token for tenant: sudha
-2025-08-11 18:01:37 - Starting mailer invocation.
-2025-08-11 18:01:37 - Requesting new access token for tenant: sudha
-2025-08-11 18:02:42 - Starting mailer invocation.
-2025-08-11 18:02:42 - Requesting new access token for tenant: sudha
-2025-08-11 18:03:47 - Starting mailer invocation.
-2025-08-11 18:03:47 - Requesting new access token for tenant: sudha
-2025-08-11 18:04:52 - Starting mailer invocation.
-2025-08-11 18:04:52 - Requesting new access token for tenant: sudha
-2025-08-11 18:05:57 - Starting mailer invocation.
-2025-08-11 18:05:57 - Requesting new access token for tenant: sudha
-2025-08-11 18:07:02 - Starting mailer invocation.
-2025-08-11 18:07:02 - Requesting new access token for tenant: sudha
-2025-08-11 18:08:07 - Starting mailer invocation.
-2025-08-11 18:08:07 - Requesting new access token for tenant: sudha
-2025-08-11 18:09:12 - Starting mailer invocation.
-2025-08-11 18:09:12 - Requesting new access token for tenant: sudha
-2025-08-11 18:10:17 - Starting mailer invocation.
-2025-08-11 18:10:17 - Requesting new access token for tenant: sudha
-2025-08-11 18:11:22 - Starting mailer invocation.
-2025-08-11 18:11:22 - Requesting new access token for tenant: sudha
-2025-08-11 18:12:27 - Starting mailer invocation.
-2025-08-11 18:12:27 - Requesting new access token for tenant: sudha
-2025-08-11 18:13:32 - Starting mailer invocation.
-2025-08-11 18:13:32 - Requesting new access token for tenant: sudha
-2025-08-11 18:14:37 - Starting mailer invocation.
-2025-08-11 18:14:37 - Requesting new access token for tenant: sudha
-2025-08-11 18:15:42 - Starting mailer invocation.
-2025-08-11 18:15:42 - Requesting new access token for tenant: sudha
-2025-08-11 18:16:47 - Starting mailer invocation.
-2025-08-11 18:16:47 - Requesting new access token for tenant: sudha
-2025-08-11 18:17:53 - Starting mailer invocation.
-2025-08-11 18:17:53 - Requesting new access token for tenant: sudha
-2025-08-11 18:18:58 - Starting mailer invocation.
-2025-08-11 18:18:58 - Requesting new access token for tenant: sudha
-2025-08-11 18:20:03 - Starting mailer invocation.
-2025-08-11 18:20:03 - Requesting new access token for tenant: sudha
-2025-08-11 18:21:08 - Starting mailer invocation.
-2025-08-11 18:21:08 - Requesting new access token for tenant: sudha
-2025-08-11 18:22:13 - Starting mailer invocation.
-2025-08-11 18:22:13 - Requesting new access token for tenant: sudha
-2025-08-11 18:23:18 - Starting mailer invocation.
-2025-08-11 18:23:18 - Requesting new access token for tenant: sudha
-2025-08-11 18:24:23 - Starting mailer invocation.
-2025-08-11 18:24:23 - Requesting new access token for tenant: sudha
-2025-08-11 18:25:28 - Starting mailer invocation.
-2025-08-11 18:25:28 - Requesting new access token for tenant: sudha
-2025-08-11 18:26:33 - Starting mailer invocation.
-2025-08-11 18:26:33 - Requesting new access token for tenant: sudha
-2025-08-11 18:27:38 - Starting mailer invocation.
-2025-08-11 18:27:38 - Requesting new access token for tenant: sudha
-2025-08-11 18:28:43 - Starting mailer invocation.
-2025-08-11 18:28:43 - Requesting new access token for tenant: sudha
-2025-08-11 18:29:48 - Starting mailer invocation.
-2025-08-11 18:29:48 - Requesting new access token for tenant: sudha
-2025-08-11 18:30:53 - Starting mailer invocation.
-2025-08-11 18:30:53 - Requesting new access token for tenant: sudha
-2025-08-11 18:31:58 - Starting mailer invocation.
-2025-08-11 18:31:58 - Requesting new access token for tenant: sudha
-2025-08-11 18:33:03 - Starting mailer invocation.
-2025-08-11 18:33:03 - Requesting new access token for tenant: sudha
-2025-08-11 18:34:08 - Starting mailer invocation.
-2025-08-11 18:34:08 - Requesting new access token for tenant: sudha
-2025-08-11 18:35:13 - Starting mailer invocation.
-2025-08-11 18:35:13 - Requesting new access token for tenant: sudha
-2025-08-11 18:36:18 - Starting mailer invocation.
-2025-08-11 18:36:18 - Requesting new access token for tenant: sudha
-2025-08-11 18:37:23 - Starting mailer invocation.
-2025-08-11 18:37:23 - Requesting new access token for tenant: sudha
-2025-08-11 18:38:28 - Starting mailer invocation.
-2025-08-11 18:38:28 - Requesting new access token for tenant: sudha
-2025-08-11 18:39:33 - Starting mailer invocation.
-2025-08-11 18:39:33 - Requesting new access token for tenant: sudha
-2025-08-11 18:40:38 - Starting mailer invocation.
-2025-08-11 18:40:38 - Requesting new access token for tenant: sudha
-2025-08-11 18:41:44 - Starting mailer invocation.
-2025-08-11 18:41:44 - Requesting new access token for tenant: sudha
-2025-08-11 18:42:49 - Starting mailer invocation.
-2025-08-11 18:42:49 - Requesting new access token for tenant: sudha
-2025-08-11 18:43:54 - Starting mailer invocation.
-2025-08-11 18:43:54 - Requesting new access token for tenant: sudha
-2025-08-11 18:44:59 - Starting mailer invocation.
-2025-08-11 18:44:59 - Requesting new access token for tenant: sudha
-2025-08-11 18:46:04 - Starting mailer invocation.
-2025-08-11 18:46:04 - Requesting new access token for tenant: sudha
-2025-08-11 18:47:09 - Starting mailer invocation.
-2025-08-11 18:47:09 - Requesting new access token for tenant: sudha
-2025-08-11 18:48:14 - Starting mailer invocation.
-2025-08-11 18:48:14 - Requesting new access token for tenant: sudha
-2025-08-11 18:49:19 - Starting mailer invocation.
-2025-08-11 18:49:19 - Requesting new access token for tenant: sudha
-2025-08-11 18:50:24 - Starting mailer invocation.
-2025-08-11 18:50:24 - Requesting new access token for tenant: sudha
-2025-08-11 18:51:29 - Starting mailer invocation.
-2025-08-11 18:51:29 - Requesting new access token for tenant: sudha
-2025-08-11 18:52:34 - Starting mailer invocation.
-2025-08-11 18:52:34 - Requesting new access token for tenant: sudha
-2025-08-11 18:53:39 - Starting mailer invocation.
-2025-08-11 18:53:39 - Requesting new access token for tenant: sudha
-2025-08-11 18:54:44 - Starting mailer invocation.
-2025-08-11 18:54:44 - Requesting new access token for tenant: sudha
-2025-08-11 18:55:49 - Starting mailer invocation.
-2025-08-11 18:55:49 - Requesting new access token for tenant: sudha
-2025-08-11 18:56:54 - Starting mailer invocation.
-2025-08-11 18:56:54 - Requesting new access token for tenant: sudha
-2025-08-11 18:57:59 - Starting mailer invocation.
-2025-08-11 18:57:59 - Requesting new access token for tenant: sudha
-2025-08-11 18:59:04 - Starting mailer invocation.
-2025-08-11 18:59:04 - Requesting new access token for tenant: sudha
-2025-08-11 19:00:09 - Starting mailer invocation.
-2025-08-11 19:00:09 - Requesting new access token for tenant: sudha
-2025-08-11 19:01:14 - Starting mailer invocation.
-2025-08-11 19:01:14 - Requesting new access token for tenant: sudha
-2025-08-11 19:02:19 - Starting mailer invocation.
-2025-08-11 19:02:19 - Requesting new access token for tenant: sudha
-2025-08-11 19:03:24 - Starting mailer invocation.
-2025-08-11 19:03:24 - Requesting new access token for tenant: sudha
-2025-08-11 19:04:30 - Starting mailer invocation.
-2025-08-11 19:04:30 - Requesting new access token for tenant: sudha
-2025-08-11 19:05:35 - Starting mailer invocation.
-2025-08-11 19:05:35 - Requesting new access token for tenant: sudha
-2025-08-11 19:06:40 - Starting mailer invocation.
-2025-08-11 19:06:40 - Requesting new access token for tenant: sudha
-2025-08-11 19:07:45 - Starting mailer invocation.
-2025-08-11 19:07:45 - Requesting new access token for tenant: sudha
-2025-08-11 19:08:50 - Starting mailer invocation.
-2025-08-11 19:08:50 - Requesting new access token for tenant: sudha
-2025-08-11 19:09:55 - Starting mailer invocation.
-2025-08-11 19:09:55 - Requesting new access token for tenant: sudha
-2025-08-11 19:11:00 - Starting mailer invocation.
-2025-08-11 19:11:00 - Requesting new access token for tenant: sudha
-2025-08-11 19:12:05 - Starting mailer invocation.
-2025-08-11 19:12:05 - Requesting new access token for tenant: sudha
-2025-08-11 19:13:10 - Starting mailer invocation.
-2025-08-11 19:13:10 - Requesting new access token for tenant: sudha
-2025-08-11 19:14:15 - Starting mailer invocation.
-2025-08-11 19:14:15 - Requesting new access token for tenant: sudha
-2025-08-11 19:52:04 - Starting mailer invocation.
-2025-08-11 19:52:04 - Requesting new access token for tenant: sudha
-2025-08-11 19:53:09 - Starting mailer invocation.
-2025-08-11 19:53:09 - Requesting new access token for tenant: sudha
-2025-08-11 19:54:14 - Starting mailer invocation.
-2025-08-11 19:54:14 - Requesting new access token for tenant: sudha
-2025-08-11 20:05:56 - Starting mailer invocation.
-2025-08-11 20:05:56 - Requesting new access token for tenant: sudha
-2025-08-11 20:07:02 - Starting mailer invocation.
-2025-08-11 20:07:02 - Requesting new access token for tenant: sudha
-2025-08-11 20:08:07 - Starting mailer invocation.
-2025-08-11 20:08:07 - Requesting new access token for tenant: sudha
-2025-08-11 20:09:12 - Starting mailer invocation.
-2025-08-11 20:09:12 - Requesting new access token for tenant: sudha
-2025-08-11 20:10:17 - Starting mailer invocation.
-2025-08-11 20:10:17 - Requesting new access token for tenant: sudha
-2025-08-11 20:11:22 - Starting mailer invocation.
-2025-08-11 20:11:22 - Requesting new access token for tenant: sudha
-2025-08-11 20:12:27 - Starting mailer invocation.
-2025-08-11 20:12:27 - Requesting new access token for tenant: sudha
-2025-08-11 20:13:32 - Starting mailer invocation.
-2025-08-11 20:13:32 - Requesting new access token for tenant: sudha
-2025-08-11 20:14:37 - Starting mailer invocation.
-2025-08-11 20:14:37 - Requesting new access token for tenant: sudha
-2025-08-11 20:15:42 - Starting mailer invocation.
-2025-08-11 20:15:42 - Requesting new access token for tenant: sudha
-2025-08-11 20:16:47 - Starting mailer invocation.
-2025-08-11 20:16:47 - Requesting new access token for tenant: sudha
-2025-08-11 20:17:52 - Starting mailer invocation.
-2025-08-11 20:17:52 - Requesting new access token for tenant: sudha
-2025-08-11 20:18:57 - Starting mailer invocation.
-2025-08-11 20:18:57 - Requesting new access token for tenant: sudha
-2025-08-11 20:20:02 - Starting mailer invocation.
-2025-08-11 20:20:02 - Requesting new access token for tenant: sudha
-2025-08-11 20:21:08 - Starting mailer invocation.
-2025-08-11 20:21:08 - Requesting new access token for tenant: sudha
-2025-08-11 20:21:31 - Starting mailer invocation.
-2025-08-11 20:21:31 - Requesting new access token for tenant: sudha
-2025-08-11 20:21:39 - Starting mailer invocation.
-2025-08-11 20:21:39 - Requesting new access token for tenant: sudha
-2025-08-11 20:22:44 - Starting mailer invocation.
-2025-08-11 20:22:44 - Requesting new access token for tenant: sudha
-2025-08-11 20:23:49 - Starting mailer invocation.
-2025-08-11 20:23:49 - Requesting new access token for tenant: sudha
-2025-08-11 20:27:39 - Starting mailer invocation.
-2025-08-11 20:27:39 - Requesting new access token for tenant: sudha
-2025-08-11 20:28:15 - Starting mailer invocation.
-2025-08-11 20:28:15 - Requesting new access token for tenant: sudha
-2025-08-11 20:33:54 - Starting mailer invocation.
-2025-08-11 20:33:54 - Requesting new access token for tenant: sudha
-2025-08-11 20:34:59 - Starting mailer invocation.
-2025-08-11 20:34:59 - Requesting new access token for tenant: sudha
-2025-08-11 20:36:04 - Starting mailer invocation.
-2025-08-11 20:36:04 - Requesting new access token for tenant: sudha
-2025-08-11 20:37:09 - Starting mailer invocation.
-2025-08-11 20:37:09 - Requesting new access token for tenant: sudha
-2025-08-11 20:37:43 - Starting mailer invocation.
-2025-08-11 20:37:43 - Requesting new access token for tenant: sudha
-2025-08-11 20:38:48 - Starting mailer invocation.
-2025-08-11 20:38:48 - Requesting new access token for tenant: sudha
-2025-08-11 20:38:57 - Starting mailer invocation.
-2025-08-11 20:38:57 - Requesting new access token for tenant: sudha
-2025-08-11 20:40:02 - Starting mailer invocation.
-2025-08-11 20:40:02 - Requesting new access token for tenant: sudha
-2025-08-11 20:41:07 - Starting mailer invocation.
-2025-08-11 20:41:07 - Requesting new access token for tenant: sudha
-2025-08-11 20:42:12 - Starting mailer invocation.
-2025-08-11 20:42:12 - Requesting new access token for tenant: sudha
-2025-08-11 20:42:48 - Starting mailer invocation.
-2025-08-11 20:42:48 - Requesting new access token for tenant: sudha
-2025-08-11 20:43:17 - Starting mailer invocation.
-2025-08-11 20:43:17 - Requesting new access token for tenant: sudha
-2025-08-11 20:43:44 - Starting mailer invocation.
-2025-08-11 20:43:44 - Requesting new access token for tenant: sudha
-2025-08-11 20:43:53 - Starting mailer invocation.
-2025-08-11 20:43:53 - Requesting new access token for tenant: sudha
-2025-08-11 20:44:22 - Starting mailer invocation.
-2025-08-11 20:44:22 - Requesting new access token for tenant: sudha
-2025-08-11 20:44:49 - Starting mailer invocation.
-2025-08-11 20:44:49 - Requesting new access token for tenant: sudha
-2025-08-11 20:44:59 - Starting mailer invocation.
-2025-08-11 20:44:59 - Requesting new access token for tenant: sudha
-2025-08-11 20:45:27 - Starting mailer invocation.
-2025-08-11 20:45:27 - Requesting new access token for tenant: sudha
-2025-08-11 20:45:55 - Starting mailer invocation.
-2025-08-11 20:45:55 - Requesting new access token for tenant: sudha
-2025-08-11 20:46:04 - Starting mailer invocation.
-2025-08-11 20:46:04 - Requesting new access token for tenant: sudha
-2025-08-11 20:46:32 - Starting mailer invocation.
-2025-08-11 20:46:32 - Requesting new access token for tenant: sudha
-2025-08-11 20:47:00 - Starting mailer invocation.
-2025-08-11 20:47:00 - Requesting new access token for tenant: sudha
-2025-08-11 20:47:07 - Starting mailer invocation.
-2025-08-11 20:47:07 - Requesting new access token for tenant: sudha
-2025-08-11 20:47:07 - Error: Secret sudha-clientId not found at C:\ProgramData\CxMailer\Secrets\sudha-clientId.txt
-2025-08-11 20:47:09 - Starting mailer invocation.
-2025-08-11 20:47:09 - Requesting new access token for tenant: sudha
-2025-08-11 20:47:37 - Starting mailer invocation.
-2025-08-11 20:47:37 - Requesting new access token for tenant: sudha
-2025-08-11 20:48:12 - Starting mailer invocation.
-2025-08-11 20:48:12 - Requesting new access token for tenant: sudha
-2025-08-11 20:48:12 - Error: Secret sudha-clientId not found at C:\ProgramData\CxMailer\Secrets\sudha-clientId.txt
-2025-08-11 20:48:14 - Starting mailer invocation.
-2025-08-11 20:48:14 - Requesting new access token for tenant: sudha
-2025-08-11 20:48:42 - Starting mailer invocation.
-2025-08-11 20:48:42 - Requesting new access token for tenant: sudha
-2025-08-11 20:49:17 - Starting mailer invocation.
-2025-08-11 20:49:17 - Requesting new access token for tenant: sudha
-2025-08-11 20:49:17 - Error: Secret sudha-clientId not found at C:\ProgramData\CxMailer\Secrets\sudha-clientId.txt
-2025-08-11 20:49:19 - Starting mailer invocation.
-2025-08-11 20:49:19 - Requesting new access token for tenant: sudha
-2025-08-11 20:49:47 - Starting mailer invocation.
-2025-08-11 20:49:47 - Requesting new access token for tenant: sudha
-2025-08-11 20:50:22 - Starting mailer invocation.
-2025-08-11 20:50:22 - Requesting new access token for tenant: sudha
-2025-08-11 20:50:22 - Failed to retrieve access token. Error: The remote server returned an error: (401) Unauthorized.
-2025-08-11 20:50:24 - Starting mailer invocation.
-2025-08-11 20:50:24 - Requesting new access token for tenant: sudha
-2025-08-11 20:50:44 - Starting mailer invocation.
-2025-08-11 20:50:44 - Requesting new access token for tenant: sudha
-2025-08-11 20:50:44 - Failed to retrieve access token. Error: The remote server returned an error: (401) Unauthorized.
-2025-08-11 20:50:52 - Starting mailer invocation.
-2025-08-11 20:50:52 - Requesting new access token for tenant: sudha
-2025-08-11 20:51:29 - Starting mailer invocation.
-2025-08-11 20:51:29 - Requesting new access token for tenant: sudha
-2025-08-11 20:51:37 - Starting mailer invocation.
-2025-08-11 20:51:37 - Requesting new access token for tenant: sudha
-2025-08-11 20:51:38 - Failed to retrieve access token. Error: The remote server returned an error: (401) Unauthorized.
-2025-08-11 20:52:43 - Starting mailer invocation.
-2025-08-11 20:52:43 - Requesting new access token for tenant: sudha
-2025-08-11 20:52:43 - Failed to retrieve access token. Error: The remote server returned an error: (401) Unauthorized.
-2025-08-11 20:53:48 - Starting mailer invocation.
-2025-08-11 20:53:48 - Requesting new access token for tenant: sudha
-2025-08-11 20:53:48 - Failed to retrieve access token. Error: The remote server returned an error: (401) Unauthorized.
-2025-08-11 20:54:53 - Starting mailer invocation.
-2025-08-11 20:54:53 - Requesting new access token for tenant: sudha
-2025-08-11 20:54:53 - Access token retrieved successfully at 2025-08-11 20:54:53
-2025-08-11 20:54:53 - No seen scans file found, returning empty set
-2025-08-11 20:54:53 - Using fallback last-processed timestamp (UTC): 2025-08-10T15:24:53.347168Z - persisting it for future runs
-2025-08-11 20:54:53 - Saved last processed timestamp (UTC): 2025-08-10T15:24:53.347168Z
-2025-08-11 20:54:53 - Saved last processed timestamp (local): 2025-08-10 20:54:53
-2025-08-11 20:54:53 - Using from-date (UTC): 2025-08-10T15:24:53.347168Z
-2025-08-11 20:54:53 - Using from-date (Local): 2025-08-10 20:54:53
-2025-08-11 20:54:53 - Queried API is called.
-2025-08-11 20:54:53 - DEBUG: API call using from-date (UTC): 2025-08-10T15:24:53.347168Z
-2025-08-11 20:54:53 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-10T15:24:53.347168Z
-2025-08-11 20:54:53 - List of completed scans fetched successfully. Count: 20
-2025-08-11 20:54:53 - Scans fetched successfully. Count: 20
-2025-08-11 20:54:53 - Processing Scan ID: 15ed0c05-05fd-43a0-a0f8-f86bfe7faba7
-2025-08-11 20:54:53 - Fetching scan details for Scan ID: 15ed0c05-05fd-43a0-a0f8-f86bfe7faba7.
-2025-08-11 20:54:53 - Scan details fetched successfully for 15ed0c05-05fd-43a0-a0f8-f86bfe7faba7
-2025-08-11 20:54:53 - Sending email with subject: Checkmarx scan 15ed0c05-05fd-43a0-a0f8-f86bfe7faba7 completed
-2025-08-11 20:54:57 - Email sent successfully.
-2025-08-11 20:54:57 - Added scan ID 15ed0c05-05fd-43a0-a0f8-f86bfe7faba7 to seen list
-2025-08-11 20:54:57 - Scan ID: 15ed0c05-05fd-43a0-a0f8-f86bfe7faba7 processed successfully.
-2025-08-11 20:54:57 - Processing Scan ID: 74ecd42d-93ca-4d55-86c6-dc2a00a319a5
-2025-08-11 20:54:57 - Fetching scan details for Scan ID: 74ecd42d-93ca-4d55-86c6-dc2a00a319a5.
-2025-08-11 20:54:57 - Scan details fetched successfully for 74ecd42d-93ca-4d55-86c6-dc2a00a319a5
-2025-08-11 20:54:57 - Sending email with subject: Checkmarx scan 74ecd42d-93ca-4d55-86c6-dc2a00a319a5 completed
-2025-08-11 20:55:01 - Email sent successfully.
-2025-08-11 20:55:01 - Added scan ID 74ecd42d-93ca-4d55-86c6-dc2a00a319a5 to seen list
-2025-08-11 20:55:01 - Scan ID: 74ecd42d-93ca-4d55-86c6-dc2a00a319a5 processed successfully.
-2025-08-11 20:55:01 - Processing Scan ID: d2a1a29b-c444-41ad-91ea-6d9f32596d90
-2025-08-11 20:55:01 - Fetching scan details for Scan ID: d2a1a29b-c444-41ad-91ea-6d9f32596d90.
-2025-08-11 20:55:01 - Scan details fetched successfully for d2a1a29b-c444-41ad-91ea-6d9f32596d90
-2025-08-11 20:55:01 - Sending email with subject: Checkmarx scan d2a1a29b-c444-41ad-91ea-6d9f32596d90 completed
-2025-08-11 20:55:05 - Email sent successfully.
-2025-08-11 20:55:05 - Added scan ID d2a1a29b-c444-41ad-91ea-6d9f32596d90 to seen list
-2025-08-11 20:55:05 - Scan ID: d2a1a29b-c444-41ad-91ea-6d9f32596d90 processed successfully.
-2025-08-11 20:55:05 - Processing Scan ID: 3da99c73-8fa8-4677-b927-a949bc20d039
-2025-08-11 20:55:05 - Fetching scan details for Scan ID: 3da99c73-8fa8-4677-b927-a949bc20d039.
-2025-08-11 20:55:05 - Scan details fetched successfully for 3da99c73-8fa8-4677-b927-a949bc20d039
-2025-08-11 20:55:05 - Sending email with subject: Checkmarx scan 3da99c73-8fa8-4677-b927-a949bc20d039 completed
-2025-08-11 20:55:09 - Email sent successfully.
-2025-08-11 20:55:09 - Added scan ID 3da99c73-8fa8-4677-b927-a949bc20d039 to seen list
-2025-08-11 20:55:09 - Scan ID: 3da99c73-8fa8-4677-b927-a949bc20d039 processed successfully.
-2025-08-11 20:55:09 - Processing Scan ID: 1c408659-01d7-48c5-8826-64ac4741a03e
-2025-08-11 20:55:09 - Fetching scan details for Scan ID: 1c408659-01d7-48c5-8826-64ac4741a03e.
-2025-08-11 20:55:09 - Scan details fetched successfully for 1c408659-01d7-48c5-8826-64ac4741a03e
-2025-08-11 20:55:09 - Sending email with subject: Checkmarx scan 1c408659-01d7-48c5-8826-64ac4741a03e completed
-2025-08-11 20:55:13 - Email sent successfully.
-2025-08-11 20:55:13 - Added scan ID 1c408659-01d7-48c5-8826-64ac4741a03e to seen list
-2025-08-11 20:55:13 - Scan ID: 1c408659-01d7-48c5-8826-64ac4741a03e processed successfully.
-2025-08-11 20:55:13 - Processing Scan ID: 0bd4d7aa-b10f-4d5c-be47-e3e494e47df4
-2025-08-11 20:55:13 - Fetching scan details for Scan ID: 0bd4d7aa-b10f-4d5c-be47-e3e494e47df4.
-2025-08-11 20:55:13 - Scan details fetched successfully for 0bd4d7aa-b10f-4d5c-be47-e3e494e47df4
-2025-08-11 20:55:13 - Sending email with subject: Checkmarx scan 0bd4d7aa-b10f-4d5c-be47-e3e494e47df4 completed
+﻿2025-08-18 13:22:37 - Starting mailer invocation.
+2025-08-18 13:22:37 - Reusing cached access token.
+2025-08-18 13:22:37 - Loaded 5 seen scan IDs from file
+2025-08-18 13:22:37 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:22:37 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:22:37 - Queried API is called.
+2025-08-18 13:22:37 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:22:37 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:22:37 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:22:37 - Scans fetched successfully. Count: 0
+2025-08-18 13:22:37 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:22:52 - Starting mailer invocation.
+2025-08-18 13:22:52 - Reusing cached access token.
+2025-08-18 13:22:52 - Loaded 5 seen scan IDs from file
+2025-08-18 13:22:52 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:22:52 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:22:52 - Queried API is called.
+2025-08-18 13:22:52 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:22:52 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:22:53 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:22:53 - Scans fetched successfully. Count: 0
+2025-08-18 13:22:53 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:23:08 - Starting mailer invocation.
+2025-08-18 13:23:08 - Reusing cached access token.
+2025-08-18 13:23:08 - Loaded 5 seen scan IDs from file
+2025-08-18 13:23:08 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:08 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:23:08 - Queried API is called.
+2025-08-18 13:23:08 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:08 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:08 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:23:08 - Scans fetched successfully. Count: 0
+2025-08-18 13:23:08 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:23:23 - Starting mailer invocation.
+2025-08-18 13:23:23 - Reusing cached access token.
+2025-08-18 13:23:23 - Loaded 5 seen scan IDs from file
+2025-08-18 13:23:23 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:23 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:23:23 - Queried API is called.
+2025-08-18 13:23:23 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:23 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:23 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:23:23 - Scans fetched successfully. Count: 0
+2025-08-18 13:23:23 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:23:38 - Starting mailer invocation.
+2025-08-18 13:23:38 - Reusing cached access token.
+2025-08-18 13:23:38 - Loaded 5 seen scan IDs from file
+2025-08-18 13:23:38 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:38 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:23:38 - Queried API is called.
+2025-08-18 13:23:38 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:38 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:38 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:23:38 - Scans fetched successfully. Count: 0
+2025-08-18 13:23:38 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:23:53 - Starting mailer invocation.
+2025-08-18 13:23:53 - Reusing cached access token.
+2025-08-18 13:23:53 - Loaded 5 seen scan IDs from file
+2025-08-18 13:23:53 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:53 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:23:53 - Queried API is called.
+2025-08-18 13:23:53 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:53 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:23:53 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:23:53 - Scans fetched successfully. Count: 0
+2025-08-18 13:23:53 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:24:08 - Starting mailer invocation.
+2025-08-18 13:24:08 - Reusing cached access token.
+2025-08-18 13:24:08 - Loaded 5 seen scan IDs from file
+2025-08-18 13:24:08 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:08 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:24:08 - Queried API is called.
+2025-08-18 13:24:08 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:08 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:09 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:24:09 - Scans fetched successfully. Count: 0
+2025-08-18 13:24:09 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:24:24 - Starting mailer invocation.
+2025-08-18 13:24:24 - Reusing cached access token.
+2025-08-18 13:24:24 - Loaded 5 seen scan IDs from file
+2025-08-18 13:24:24 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:24 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:24:24 - Queried API is called.
+2025-08-18 13:24:24 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:24 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:24 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:24:24 - Scans fetched successfully. Count: 0
+2025-08-18 13:24:24 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:24:39 - Starting mailer invocation.
+2025-08-18 13:24:39 - Reusing cached access token.
+2025-08-18 13:24:39 - Loaded 5 seen scan IDs from file
+2025-08-18 13:24:39 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:39 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:24:39 - Queried API is called.
+2025-08-18 13:24:39 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:39 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:39 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:24:39 - Scans fetched successfully. Count: 0
+2025-08-18 13:24:39 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:24:54 - Starting mailer invocation.
+2025-08-18 13:24:54 - Reusing cached access token.
+2025-08-18 13:24:54 - Loaded 5 seen scan IDs from file
+2025-08-18 13:24:54 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:54 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:24:54 - Queried API is called.
+2025-08-18 13:24:54 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:54 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:24:54 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:24:54 - Scans fetched successfully. Count: 0
+2025-08-18 13:24:54 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:25:09 - Starting mailer invocation.
+2025-08-18 13:25:09 - Reusing cached access token.
+2025-08-18 13:25:09 - Loaded 5 seen scan IDs from file
+2025-08-18 13:25:09 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:09 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:25:09 - Queried API is called.
+2025-08-18 13:25:09 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:09 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:10 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:25:10 - Scans fetched successfully. Count: 0
+2025-08-18 13:25:10 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:25:25 - Starting mailer invocation.
+2025-08-18 13:25:25 - Reusing cached access token.
+2025-08-18 13:25:25 - Loaded 5 seen scan IDs from file
+2025-08-18 13:25:25 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:25 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:25:25 - Queried API is called.
+2025-08-18 13:25:25 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:25 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:25 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:25:25 - Scans fetched successfully. Count: 0
+2025-08-18 13:25:25 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:25:40 - Starting mailer invocation.
+2025-08-18 13:25:40 - Reusing cached access token.
+2025-08-18 13:25:40 - Loaded 5 seen scan IDs from file
+2025-08-18 13:25:40 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:40 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:25:40 - Queried API is called.
+2025-08-18 13:25:40 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:40 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:40 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:25:40 - Scans fetched successfully. Count: 0
+2025-08-18 13:25:40 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:25:55 - Starting mailer invocation.
+2025-08-18 13:25:55 - Reusing cached access token.
+2025-08-18 13:25:55 - Loaded 5 seen scan IDs from file
+2025-08-18 13:25:55 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:55 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:25:55 - Queried API is called.
+2025-08-18 13:25:55 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:55 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:25:55 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:25:55 - Scans fetched successfully. Count: 0
+2025-08-18 13:25:55 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:26:10 - Starting mailer invocation.
+2025-08-18 13:26:10 - Reusing cached access token.
+2025-08-18 13:26:10 - Loaded 5 seen scan IDs from file
+2025-08-18 13:26:10 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:10 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:26:10 - Queried API is called.
+2025-08-18 13:26:10 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:10 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:11 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:26:11 - Scans fetched successfully. Count: 0
+2025-08-18 13:26:11 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:26:26 - Starting mailer invocation.
+2025-08-18 13:26:26 - Reusing cached access token.
+2025-08-18 13:26:26 - Loaded 5 seen scan IDs from file
+2025-08-18 13:26:26 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:26 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:26:26 - Queried API is called.
+2025-08-18 13:26:26 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:26 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:26 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:26:26 - Scans fetched successfully. Count: 0
+2025-08-18 13:26:26 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:26:41 - Starting mailer invocation.
+2025-08-18 13:26:41 - Reusing cached access token.
+2025-08-18 13:26:41 - Loaded 5 seen scan IDs from file
+2025-08-18 13:26:41 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:41 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:26:41 - Queried API is called.
+2025-08-18 13:26:41 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:41 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:41 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:26:41 - Scans fetched successfully. Count: 0
+2025-08-18 13:26:41 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:26:56 - Starting mailer invocation.
+2025-08-18 13:26:56 - Reusing cached access token.
+2025-08-18 13:26:56 - Loaded 5 seen scan IDs from file
+2025-08-18 13:26:56 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:56 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:26:56 - Queried API is called.
+2025-08-18 13:26:56 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:56 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:26:56 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:26:56 - Scans fetched successfully. Count: 0
+2025-08-18 13:26:56 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:27:11 - Starting mailer invocation.
+2025-08-18 13:27:11 - Reusing cached access token.
+2025-08-18 13:27:11 - Loaded 5 seen scan IDs from file
+2025-08-18 13:27:11 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:11 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:27:11 - Queried API is called.
+2025-08-18 13:27:11 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:11 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:11 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:27:11 - Scans fetched successfully. Count: 0
+2025-08-18 13:27:11 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:27:26 - Starting mailer invocation.
+2025-08-18 13:27:26 - Reusing cached access token.
+2025-08-18 13:27:26 - Loaded 5 seen scan IDs from file
+2025-08-18 13:27:26 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:26 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:27:26 - Queried API is called.
+2025-08-18 13:27:26 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:26 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:27 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:27:27 - Scans fetched successfully. Count: 0
+2025-08-18 13:27:27 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:27:42 - Starting mailer invocation.
+2025-08-18 13:27:42 - Reusing cached access token.
+2025-08-18 13:27:42 - Loaded 5 seen scan IDs from file
+2025-08-18 13:27:42 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:42 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:27:42 - Queried API is called.
+2025-08-18 13:27:42 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:42 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:42 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:27:42 - Scans fetched successfully. Count: 0
+2025-08-18 13:27:42 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:27:57 - Starting mailer invocation.
+2025-08-18 13:27:57 - Reusing cached access token.
+2025-08-18 13:27:57 - Loaded 5 seen scan IDs from file
+2025-08-18 13:27:57 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:57 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:27:57 - Queried API is called.
+2025-08-18 13:27:57 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:57 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:27:57 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:27:57 - Scans fetched successfully. Count: 0
+2025-08-18 13:27:57 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:28:12 - Starting mailer invocation.
+2025-08-18 13:28:12 - Reusing cached access token.
+2025-08-18 13:28:12 - Loaded 5 seen scan IDs from file
+2025-08-18 13:28:12 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:12 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:28:12 - Queried API is called.
+2025-08-18 13:28:12 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:12 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:12 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:28:12 - Scans fetched successfully. Count: 0
+2025-08-18 13:28:12 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:28:27 - Starting mailer invocation.
+2025-08-18 13:28:27 - Reusing cached access token.
+2025-08-18 13:28:27 - Loaded 5 seen scan IDs from file
+2025-08-18 13:28:27 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:27 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:28:27 - Queried API is called.
+2025-08-18 13:28:27 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:27 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:27 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:28:27 - Scans fetched successfully. Count: 0
+2025-08-18 13:28:27 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:28:42 - Starting mailer invocation.
+2025-08-18 13:28:42 - Reusing cached access token.
+2025-08-18 13:28:42 - Loaded 5 seen scan IDs from file
+2025-08-18 13:28:42 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:42 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:28:42 - Queried API is called.
+2025-08-18 13:28:42 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:42 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:43 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:28:43 - Scans fetched successfully. Count: 0
+2025-08-18 13:28:43 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:28:58 - Starting mailer invocation.
+2025-08-18 13:28:58 - Reusing cached access token.
+2025-08-18 13:28:58 - Loaded 5 seen scan IDs from file
+2025-08-18 13:28:58 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:58 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:28:58 - Queried API is called.
+2025-08-18 13:28:58 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:58 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:28:58 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:28:58 - Scans fetched successfully. Count: 0
+2025-08-18 13:28:58 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:29:13 - Starting mailer invocation.
+2025-08-18 13:29:13 - Reusing cached access token.
+2025-08-18 13:29:13 - Loaded 5 seen scan IDs from file
+2025-08-18 13:29:13 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:13 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:29:13 - Queried API is called.
+2025-08-18 13:29:13 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:13 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:13 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:29:13 - Scans fetched successfully. Count: 0
+2025-08-18 13:29:13 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:29:28 - Starting mailer invocation.
+2025-08-18 13:29:28 - Reusing cached access token.
+2025-08-18 13:29:28 - Loaded 5 seen scan IDs from file
+2025-08-18 13:29:28 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:28 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:29:28 - Queried API is called.
+2025-08-18 13:29:28 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:28 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:29 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:29:29 - Scans fetched successfully. Count: 0
+2025-08-18 13:29:29 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:29:44 - Starting mailer invocation.
+2025-08-18 13:29:44 - Reusing cached access token.
+2025-08-18 13:29:44 - Loaded 5 seen scan IDs from file
+2025-08-18 13:29:44 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:44 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:29:44 - Queried API is called.
+2025-08-18 13:29:44 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:44 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:44 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:29:44 - Scans fetched successfully. Count: 0
+2025-08-18 13:29:44 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:29:59 - Starting mailer invocation.
+2025-08-18 13:29:59 - Reusing cached access token.
+2025-08-18 13:29:59 - Loaded 5 seen scan IDs from file
+2025-08-18 13:29:59 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:59 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:29:59 - Queried API is called.
+2025-08-18 13:29:59 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:59 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:29:59 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:29:59 - Scans fetched successfully. Count: 0
+2025-08-18 13:29:59 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:30:14 - Starting mailer invocation.
+2025-08-18 13:30:14 - Reusing cached access token.
+2025-08-18 13:30:14 - Loaded 5 seen scan IDs from file
+2025-08-18 13:30:14 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:30:14 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:30:14 - Queried API is called.
+2025-08-18 13:30:14 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:30:14 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:30:14 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:30:14 - Scans fetched successfully. Count: 0
+2025-08-18 13:30:14 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:30:29 - Starting mailer invocation.
+2025-08-18 13:30:29 - Reusing cached access token.
+2025-08-18 13:30:29 - Loaded 5 seen scan IDs from file
+2025-08-18 13:30:29 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:30:29 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:30:29 - Queried API is called.
+2025-08-18 13:30:29 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:30:29 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:30:30 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:30:30 - Scans fetched successfully. Count: 0
+2025-08-18 13:30:30 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:30:45 - Starting mailer invocation.
+2025-08-18 13:30:45 - Reusing cached access token.
+2025-08-18 13:30:45 - Loaded 5 seen scan IDs from file
+2025-08-18 13:30:45 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:30:45 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:30:45 - Queried API is called.
+2025-08-18 13:30:45 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:30:45 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:30:45 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:30:45 - Scans fetched successfully. Count: 0
+2025-08-18 13:30:45 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:31:00 - Starting mailer invocation.
+2025-08-18 13:31:00 - Reusing cached access token.
+2025-08-18 13:31:00 - Loaded 5 seen scan IDs from file
+2025-08-18 13:31:00 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:00 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:31:00 - Queried API is called.
+2025-08-18 13:31:00 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:00 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:00 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:31:00 - Scans fetched successfully. Count: 0
+2025-08-18 13:31:00 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:31:15 - Starting mailer invocation.
+2025-08-18 13:31:15 - Reusing cached access token.
+2025-08-18 13:31:15 - Loaded 5 seen scan IDs from file
+2025-08-18 13:31:15 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:15 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:31:15 - Queried API is called.
+2025-08-18 13:31:15 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:15 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:15 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:31:15 - Scans fetched successfully. Count: 0
+2025-08-18 13:31:15 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:31:30 - Starting mailer invocation.
+2025-08-18 13:31:30 - Reusing cached access token.
+2025-08-18 13:31:30 - Loaded 5 seen scan IDs from file
+2025-08-18 13:31:30 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:30 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:31:30 - Queried API is called.
+2025-08-18 13:31:30 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:30 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:31 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:31:31 - Scans fetched successfully. Count: 0
+2025-08-18 13:31:31 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:31:46 - Starting mailer invocation.
+2025-08-18 13:31:46 - Reusing cached access token.
+2025-08-18 13:31:46 - Loaded 5 seen scan IDs from file
+2025-08-18 13:31:46 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:46 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:31:46 - Queried API is called.
+2025-08-18 13:31:46 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:46 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:31:46 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:31:46 - Scans fetched successfully. Count: 0
+2025-08-18 13:31:46 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:32:01 - Starting mailer invocation.
+2025-08-18 13:32:01 - Reusing cached access token.
+2025-08-18 13:32:01 - Loaded 5 seen scan IDs from file
+2025-08-18 13:32:01 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:01 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:32:01 - Queried API is called.
+2025-08-18 13:32:01 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:01 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:01 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:32:01 - Scans fetched successfully. Count: 0
+2025-08-18 13:32:01 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:32:16 - Starting mailer invocation.
+2025-08-18 13:32:16 - Reusing cached access token.
+2025-08-18 13:32:16 - Loaded 5 seen scan IDs from file
+2025-08-18 13:32:16 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:16 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:32:16 - Queried API is called.
+2025-08-18 13:32:16 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:16 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:17 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:32:17 - Scans fetched successfully. Count: 0
+2025-08-18 13:32:17 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:32:32 - Starting mailer invocation.
+2025-08-18 13:32:32 - Reusing cached access token.
+2025-08-18 13:32:32 - Loaded 5 seen scan IDs from file
+2025-08-18 13:32:32 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:32 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:32:32 - Queried API is called.
+2025-08-18 13:32:32 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:32 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:32 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:32:32 - Scans fetched successfully. Count: 0
+2025-08-18 13:32:32 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:32:47 - Starting mailer invocation.
+2025-08-18 13:32:47 - Reusing cached access token.
+2025-08-18 13:32:47 - Loaded 5 seen scan IDs from file
+2025-08-18 13:32:47 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:47 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:32:47 - Queried API is called.
+2025-08-18 13:32:47 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:47 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:32:47 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:32:47 - Scans fetched successfully. Count: 0
+2025-08-18 13:32:47 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:33:02 - Starting mailer invocation.
+2025-08-18 13:33:02 - Reusing cached access token.
+2025-08-18 13:33:02 - Loaded 5 seen scan IDs from file
+2025-08-18 13:33:02 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:02 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:33:02 - Queried API is called.
+2025-08-18 13:33:02 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:02 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:02 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:33:02 - Scans fetched successfully. Count: 0
+2025-08-18 13:33:02 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:33:17 - Starting mailer invocation.
+2025-08-18 13:33:17 - Reusing cached access token.
+2025-08-18 13:33:17 - Loaded 5 seen scan IDs from file
+2025-08-18 13:33:17 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:17 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:33:17 - Queried API is called.
+2025-08-18 13:33:17 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:17 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:18 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:33:18 - Scans fetched successfully. Count: 0
+2025-08-18 13:33:18 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:33:33 - Starting mailer invocation.
+2025-08-18 13:33:33 - Reusing cached access token.
+2025-08-18 13:33:33 - Loaded 5 seen scan IDs from file
+2025-08-18 13:33:33 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:33 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:33:33 - Queried API is called.
+2025-08-18 13:33:33 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:33 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:33 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:33:33 - Scans fetched successfully. Count: 0
+2025-08-18 13:33:33 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:33:48 - Starting mailer invocation.
+2025-08-18 13:33:48 - Reusing cached access token.
+2025-08-18 13:33:48 - Loaded 5 seen scan IDs from file
+2025-08-18 13:33:48 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:48 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:33:48 - Queried API is called.
+2025-08-18 13:33:48 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:48 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:33:48 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:33:48 - Scans fetched successfully. Count: 0
+2025-08-18 13:33:48 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:34:03 - Starting mailer invocation.
+2025-08-18 13:34:03 - Reusing cached access token.
+2025-08-18 13:34:03 - Loaded 5 seen scan IDs from file
+2025-08-18 13:34:03 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:03 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:34:03 - Queried API is called.
+2025-08-18 13:34:03 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:03 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:03 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:34:03 - Scans fetched successfully. Count: 0
+2025-08-18 13:34:03 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:34:18 - Starting mailer invocation.
+2025-08-18 13:34:18 - Reusing cached access token.
+2025-08-18 13:34:18 - Loaded 5 seen scan IDs from file
+2025-08-18 13:34:18 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:18 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:34:18 - Queried API is called.
+2025-08-18 13:34:18 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:18 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:18 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:34:18 - Scans fetched successfully. Count: 0
+2025-08-18 13:34:18 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:34:33 - Starting mailer invocation.
+2025-08-18 13:34:33 - Reusing cached access token.
+2025-08-18 13:34:33 - Loaded 5 seen scan IDs from file
+2025-08-18 13:34:33 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:33 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:34:33 - Queried API is called.
+2025-08-18 13:34:33 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:33 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:34 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:34:34 - Scans fetched successfully. Count: 0
+2025-08-18 13:34:34 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:34:49 - Starting mailer invocation.
+2025-08-18 13:34:49 - Reusing cached access token.
+2025-08-18 13:34:49 - Loaded 5 seen scan IDs from file
+2025-08-18 13:34:49 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:49 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:34:49 - Queried API is called.
+2025-08-18 13:34:49 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:49 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:34:49 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:34:49 - Scans fetched successfully. Count: 0
+2025-08-18 13:34:49 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:35:04 - Starting mailer invocation.
+2025-08-18 13:35:04 - Reusing cached access token.
+2025-08-18 13:35:04 - Loaded 5 seen scan IDs from file
+2025-08-18 13:35:04 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:04 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:35:04 - Queried API is called.
+2025-08-18 13:35:04 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:04 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:04 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:35:04 - Scans fetched successfully. Count: 0
+2025-08-18 13:35:04 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:35:19 - Starting mailer invocation.
+2025-08-18 13:35:19 - Reusing cached access token.
+2025-08-18 13:35:19 - Loaded 5 seen scan IDs from file
+2025-08-18 13:35:19 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:19 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:35:19 - Queried API is called.
+2025-08-18 13:35:19 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:19 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:19 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:35:19 - Scans fetched successfully. Count: 0
+2025-08-18 13:35:19 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:35:34 - Starting mailer invocation.
+2025-08-18 13:35:34 - Reusing cached access token.
+2025-08-18 13:35:34 - Loaded 5 seen scan IDs from file
+2025-08-18 13:35:34 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:34 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:35:34 - Queried API is called.
+2025-08-18 13:35:34 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:34 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:35 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:35:35 - Scans fetched successfully. Count: 0
+2025-08-18 13:35:35 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:35:50 - Starting mailer invocation.
+2025-08-18 13:35:50 - Reusing cached access token.
+2025-08-18 13:35:50 - Loaded 5 seen scan IDs from file
+2025-08-18 13:35:50 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:50 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:35:50 - Queried API is called.
+2025-08-18 13:35:50 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:50 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:35:50 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:35:50 - Scans fetched successfully. Count: 0
+2025-08-18 13:35:50 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:36:05 - Starting mailer invocation.
+2025-08-18 13:36:05 - Reusing cached access token.
+2025-08-18 13:36:05 - Loaded 5 seen scan IDs from file
+2025-08-18 13:36:05 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:05 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:36:05 - Queried API is called.
+2025-08-18 13:36:05 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:05 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:05 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:36:05 - Scans fetched successfully. Count: 0
+2025-08-18 13:36:05 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:36:20 - Starting mailer invocation.
+2025-08-18 13:36:20 - Reusing cached access token.
+2025-08-18 13:36:20 - Loaded 5 seen scan IDs from file
+2025-08-18 13:36:20 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:20 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:36:20 - Queried API is called.
+2025-08-18 13:36:20 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:20 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:20 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:36:20 - Scans fetched successfully. Count: 0
+2025-08-18 13:36:20 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:36:35 - Starting mailer invocation.
+2025-08-18 13:36:35 - Reusing cached access token.
+2025-08-18 13:36:35 - Loaded 5 seen scan IDs from file
+2025-08-18 13:36:35 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:35 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:36:35 - Queried API is called.
+2025-08-18 13:36:35 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:35 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:36 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:36:36 - Scans fetched successfully. Count: 0
+2025-08-18 13:36:36 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:36:51 - Starting mailer invocation.
+2025-08-18 13:36:51 - Reusing cached access token.
+2025-08-18 13:36:51 - Loaded 5 seen scan IDs from file
+2025-08-18 13:36:51 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:51 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:36:51 - Queried API is called.
+2025-08-18 13:36:51 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:51 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:36:51 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:36:51 - Scans fetched successfully. Count: 0
+2025-08-18 13:36:51 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:37:06 - Starting mailer invocation.
+2025-08-18 13:37:06 - Reusing cached access token.
+2025-08-18 13:37:06 - Loaded 5 seen scan IDs from file
+2025-08-18 13:37:06 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:06 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:37:06 - Queried API is called.
+2025-08-18 13:37:06 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:06 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:06 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:37:06 - Scans fetched successfully. Count: 0
+2025-08-18 13:37:06 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:37:21 - Starting mailer invocation.
+2025-08-18 13:37:21 - Reusing cached access token.
+2025-08-18 13:37:21 - Loaded 5 seen scan IDs from file
+2025-08-18 13:37:21 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:21 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:37:21 - Queried API is called.
+2025-08-18 13:37:21 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:21 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:21 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:37:21 - Scans fetched successfully. Count: 0
+2025-08-18 13:37:21 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:37:36 - Starting mailer invocation.
+2025-08-18 13:37:36 - Reusing cached access token.
+2025-08-18 13:37:36 - Loaded 5 seen scan IDs from file
+2025-08-18 13:37:36 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:36 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:37:36 - Queried API is called.
+2025-08-18 13:37:36 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:36 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:37 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:37:37 - Scans fetched successfully. Count: 0
+2025-08-18 13:37:37 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:37:52 - Starting mailer invocation.
+2025-08-18 13:37:52 - Reusing cached access token.
+2025-08-18 13:37:52 - Loaded 5 seen scan IDs from file
+2025-08-18 13:37:52 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:52 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:37:52 - Queried API is called.
+2025-08-18 13:37:52 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:52 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:37:52 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:37:52 - Scans fetched successfully. Count: 0
+2025-08-18 13:37:52 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:38:07 - Starting mailer invocation.
+2025-08-18 13:38:07 - Requesting new access token for tenant: sudha
+2025-08-18 13:38:07 - Access token retrieved successfully at 2025-08-18 13:38:07
+2025-08-18 13:38:07 - Loaded 5 seen scan IDs from file
+2025-08-18 13:38:07 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:07 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:38:07 - Queried API is called.
+2025-08-18 13:38:07 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:07 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:08 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:38:08 - Scans fetched successfully. Count: 0
+2025-08-18 13:38:08 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:38:23 - Starting mailer invocation.
+2025-08-18 13:38:23 - Reusing cached access token.
+2025-08-18 13:38:23 - Loaded 5 seen scan IDs from file
+2025-08-18 13:38:23 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:23 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:38:23 - Queried API is called.
+2025-08-18 13:38:23 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:23 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:23 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:38:23 - Scans fetched successfully. Count: 0
+2025-08-18 13:38:23 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:38:38 - Starting mailer invocation.
+2025-08-18 13:38:38 - Reusing cached access token.
+2025-08-18 13:38:38 - Loaded 5 seen scan IDs from file
+2025-08-18 13:38:38 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:38 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:38:38 - Queried API is called.
+2025-08-18 13:38:38 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:38 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:38 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:38:38 - Scans fetched successfully. Count: 0
+2025-08-18 13:38:38 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:38:53 - Starting mailer invocation.
+2025-08-18 13:38:53 - Reusing cached access token.
+2025-08-18 13:38:53 - Loaded 5 seen scan IDs from file
+2025-08-18 13:38:53 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:53 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:38:53 - Queried API is called.
+2025-08-18 13:38:53 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:53 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:38:53 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:38:53 - Scans fetched successfully. Count: 0
+2025-08-18 13:38:53 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:39:08 - Starting mailer invocation.
+2025-08-18 13:39:08 - Reusing cached access token.
+2025-08-18 13:39:08 - Loaded 5 seen scan IDs from file
+2025-08-18 13:39:08 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:08 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:39:08 - Queried API is called.
+2025-08-18 13:39:08 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:08 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:08 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:39:08 - Scans fetched successfully. Count: 0
+2025-08-18 13:39:08 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:39:23 - Starting mailer invocation.
+2025-08-18 13:39:23 - Reusing cached access token.
+2025-08-18 13:39:23 - Loaded 5 seen scan IDs from file
+2025-08-18 13:39:23 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:23 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:39:23 - Queried API is called.
+2025-08-18 13:39:23 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:23 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:24 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:39:24 - Scans fetched successfully. Count: 0
+2025-08-18 13:39:24 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:39:39 - Starting mailer invocation.
+2025-08-18 13:39:39 - Reusing cached access token.
+2025-08-18 13:39:39 - Loaded 5 seen scan IDs from file
+2025-08-18 13:39:39 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:39 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:39:39 - Queried API is called.
+2025-08-18 13:39:39 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:39 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:39 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:39:39 - Scans fetched successfully. Count: 0
+2025-08-18 13:39:39 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:39:54 - Starting mailer invocation.
+2025-08-18 13:39:54 - Reusing cached access token.
+2025-08-18 13:39:54 - Loaded 5 seen scan IDs from file
+2025-08-18 13:39:54 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:54 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:39:54 - Queried API is called.
+2025-08-18 13:39:54 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:54 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:39:54 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:39:54 - Scans fetched successfully. Count: 0
+2025-08-18 13:39:54 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:40:09 - Starting mailer invocation.
+2025-08-18 13:40:09 - Reusing cached access token.
+2025-08-18 13:40:09 - Loaded 5 seen scan IDs from file
+2025-08-18 13:40:09 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:09 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:40:09 - Queried API is called.
+2025-08-18 13:40:09 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:09 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:09 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:40:09 - Scans fetched successfully. Count: 0
+2025-08-18 13:40:09 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:40:24 - Starting mailer invocation.
+2025-08-18 13:40:24 - Reusing cached access token.
+2025-08-18 13:40:24 - Loaded 5 seen scan IDs from file
+2025-08-18 13:40:24 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:24 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:40:24 - Queried API is called.
+2025-08-18 13:40:24 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:24 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:25 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:40:25 - Scans fetched successfully. Count: 0
+2025-08-18 13:40:25 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:40:40 - Starting mailer invocation.
+2025-08-18 13:40:40 - Reusing cached access token.
+2025-08-18 13:40:40 - Loaded 5 seen scan IDs from file
+2025-08-18 13:40:40 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:40 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:40:40 - Queried API is called.
+2025-08-18 13:40:40 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:40 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:40 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:40:40 - Scans fetched successfully. Count: 0
+2025-08-18 13:40:40 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:40:55 - Starting mailer invocation.
+2025-08-18 13:40:55 - Reusing cached access token.
+2025-08-18 13:40:55 - Loaded 5 seen scan IDs from file
+2025-08-18 13:40:55 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:55 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:40:55 - Queried API is called.
+2025-08-18 13:40:55 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:55 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:40:55 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:40:55 - Scans fetched successfully. Count: 0
+2025-08-18 13:40:55 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:41:10 - Starting mailer invocation.
+2025-08-18 13:41:10 - Reusing cached access token.
+2025-08-18 13:41:10 - Loaded 5 seen scan IDs from file
+2025-08-18 13:41:10 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:10 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:41:10 - Queried API is called.
+2025-08-18 13:41:10 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:10 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:10 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:41:10 - Scans fetched successfully. Count: 0
+2025-08-18 13:41:10 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:41:25 - Starting mailer invocation.
+2025-08-18 13:41:25 - Reusing cached access token.
+2025-08-18 13:41:25 - Loaded 5 seen scan IDs from file
+2025-08-18 13:41:25 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:25 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:41:25 - Queried API is called.
+2025-08-18 13:41:25 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:25 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:26 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:41:26 - Scans fetched successfully. Count: 0
+2025-08-18 13:41:26 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:41:41 - Starting mailer invocation.
+2025-08-18 13:41:41 - Reusing cached access token.
+2025-08-18 13:41:41 - Loaded 5 seen scan IDs from file
+2025-08-18 13:41:41 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:41 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:41:41 - Queried API is called.
+2025-08-18 13:41:41 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:41 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:41 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:41:41 - Scans fetched successfully. Count: 0
+2025-08-18 13:41:41 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:41:56 - Starting mailer invocation.
+2025-08-18 13:41:56 - Reusing cached access token.
+2025-08-18 13:41:56 - Loaded 5 seen scan IDs from file
+2025-08-18 13:41:56 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:56 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:41:56 - Queried API is called.
+2025-08-18 13:41:56 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:56 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:41:56 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:41:56 - Scans fetched successfully. Count: 0
+2025-08-18 13:41:56 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:42:11 - Starting mailer invocation.
+2025-08-18 13:42:11 - Reusing cached access token.
+2025-08-18 13:42:11 - Loaded 5 seen scan IDs from file
+2025-08-18 13:42:11 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:11 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:42:11 - Queried API is called.
+2025-08-18 13:42:11 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:11 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:11 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:42:11 - Scans fetched successfully. Count: 0
+2025-08-18 13:42:11 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:42:26 - Starting mailer invocation.
+2025-08-18 13:42:26 - Reusing cached access token.
+2025-08-18 13:42:26 - Loaded 5 seen scan IDs from file
+2025-08-18 13:42:26 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:26 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:42:26 - Queried API is called.
+2025-08-18 13:42:26 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:26 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:27 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:42:27 - Scans fetched successfully. Count: 0
+2025-08-18 13:42:27 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:42:42 - Starting mailer invocation.
+2025-08-18 13:42:42 - Reusing cached access token.
+2025-08-18 13:42:42 - Loaded 5 seen scan IDs from file
+2025-08-18 13:42:42 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:42 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:42:42 - Queried API is called.
+2025-08-18 13:42:42 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:42 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:42 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:42:42 - Scans fetched successfully. Count: 0
+2025-08-18 13:42:42 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:42:57 - Starting mailer invocation.
+2025-08-18 13:42:57 - Reusing cached access token.
+2025-08-18 13:42:57 - Loaded 5 seen scan IDs from file
+2025-08-18 13:42:57 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:57 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:42:57 - Queried API is called.
+2025-08-18 13:42:57 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:57 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:42:57 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:42:57 - Scans fetched successfully. Count: 0
+2025-08-18 13:42:57 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:43:12 - Starting mailer invocation.
+2025-08-18 13:43:12 - Reusing cached access token.
+2025-08-18 13:43:12 - Loaded 5 seen scan IDs from file
+2025-08-18 13:43:12 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:12 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:43:12 - Queried API is called.
+2025-08-18 13:43:12 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:12 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:12 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:43:12 - Scans fetched successfully. Count: 0
+2025-08-18 13:43:12 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:43:27 - Starting mailer invocation.
+2025-08-18 13:43:27 - Reusing cached access token.
+2025-08-18 13:43:27 - Loaded 5 seen scan IDs from file
+2025-08-18 13:43:27 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:27 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:43:27 - Queried API is called.
+2025-08-18 13:43:27 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:27 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:28 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:43:28 - Scans fetched successfully. Count: 0
+2025-08-18 13:43:28 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:43:43 - Starting mailer invocation.
+2025-08-18 13:43:43 - Reusing cached access token.
+2025-08-18 13:43:43 - Loaded 5 seen scan IDs from file
+2025-08-18 13:43:43 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:43 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:43:43 - Queried API is called.
+2025-08-18 13:43:43 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:43 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:43 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:43:43 - Scans fetched successfully. Count: 0
+2025-08-18 13:43:43 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:43:58 - Starting mailer invocation.
+2025-08-18 13:43:58 - Reusing cached access token.
+2025-08-18 13:43:58 - Loaded 5 seen scan IDs from file
+2025-08-18 13:43:58 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:58 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:43:58 - Queried API is called.
+2025-08-18 13:43:58 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:58 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:43:58 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:43:58 - Scans fetched successfully. Count: 0
+2025-08-18 13:43:58 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:44:13 - Starting mailer invocation.
+2025-08-18 13:44:13 - Reusing cached access token.
+2025-08-18 13:44:13 - Loaded 5 seen scan IDs from file
+2025-08-18 13:44:13 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:13 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:44:13 - Queried API is called.
+2025-08-18 13:44:13 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:13 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:13 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:44:13 - Scans fetched successfully. Count: 0
+2025-08-18 13:44:13 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:44:28 - Starting mailer invocation.
+2025-08-18 13:44:28 - Reusing cached access token.
+2025-08-18 13:44:28 - Loaded 5 seen scan IDs from file
+2025-08-18 13:44:28 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:28 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:44:28 - Queried API is called.
+2025-08-18 13:44:28 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:28 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:29 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:44:29 - Scans fetched successfully. Count: 0
+2025-08-18 13:44:29 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:44:44 - Starting mailer invocation.
+2025-08-18 13:44:44 - Reusing cached access token.
+2025-08-18 13:44:44 - Loaded 5 seen scan IDs from file
+2025-08-18 13:44:44 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:44 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:44:44 - Queried API is called.
+2025-08-18 13:44:44 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:44 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:44 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:44:44 - Scans fetched successfully. Count: 0
+2025-08-18 13:44:44 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:44:59 - Starting mailer invocation.
+2025-08-18 13:44:59 - Reusing cached access token.
+2025-08-18 13:44:59 - Loaded 5 seen scan IDs from file
+2025-08-18 13:44:59 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:59 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:44:59 - Queried API is called.
+2025-08-18 13:44:59 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:59 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:44:59 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:44:59 - Scans fetched successfully. Count: 0
+2025-08-18 13:44:59 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:45:14 - Starting mailer invocation.
+2025-08-18 13:45:14 - Reusing cached access token.
+2025-08-18 13:45:14 - Loaded 5 seen scan IDs from file
+2025-08-18 13:45:14 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:45:14 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:45:14 - Queried API is called.
+2025-08-18 13:45:14 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:45:14 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:45:14 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:45:14 - Scans fetched successfully. Count: 0
+2025-08-18 13:45:14 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:45:29 - Starting mailer invocation.
+2025-08-18 13:45:29 - Reusing cached access token.
+2025-08-18 13:45:29 - Loaded 5 seen scan IDs from file
+2025-08-18 13:45:29 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:45:29 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:45:29 - Queried API is called.
+2025-08-18 13:45:29 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:45:29 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:45:30 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:45:30 - Scans fetched successfully. Count: 0
+2025-08-18 13:45:30 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:45:45 - Starting mailer invocation.
+2025-08-18 13:45:45 - Reusing cached access token.
+2025-08-18 13:45:45 - Loaded 5 seen scan IDs from file
+2025-08-18 13:45:45 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:45:45 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:45:45 - Queried API is called.
+2025-08-18 13:45:45 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:45:45 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:45:45 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:45:45 - Scans fetched successfully. Count: 0
+2025-08-18 13:45:45 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:46:00 - Starting mailer invocation.
+2025-08-18 13:46:00 - Reusing cached access token.
+2025-08-18 13:46:00 - Loaded 5 seen scan IDs from file
+2025-08-18 13:46:00 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:00 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:46:00 - Queried API is called.
+2025-08-18 13:46:00 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:00 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:00 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:46:00 - Scans fetched successfully. Count: 0
+2025-08-18 13:46:00 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:46:15 - Starting mailer invocation.
+2025-08-18 13:46:15 - Reusing cached access token.
+2025-08-18 13:46:15 - Loaded 5 seen scan IDs from file
+2025-08-18 13:46:15 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:15 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:46:15 - Queried API is called.
+2025-08-18 13:46:15 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:15 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:15 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:46:15 - Scans fetched successfully. Count: 0
+2025-08-18 13:46:15 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:46:30 - Starting mailer invocation.
+2025-08-18 13:46:30 - Reusing cached access token.
+2025-08-18 13:46:30 - Loaded 5 seen scan IDs from file
+2025-08-18 13:46:30 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:30 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:46:30 - Queried API is called.
+2025-08-18 13:46:30 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:30 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:30 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:46:30 - Scans fetched successfully. Count: 0
+2025-08-18 13:46:30 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:46:45 - Starting mailer invocation.
+2025-08-18 13:46:45 - Reusing cached access token.
+2025-08-18 13:46:45 - Loaded 5 seen scan IDs from file
+2025-08-18 13:46:45 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:45 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:46:45 - Queried API is called.
+2025-08-18 13:46:46 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:46 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:46:46 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:46:46 - Scans fetched successfully. Count: 0
+2025-08-18 13:46:46 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:47:01 - Starting mailer invocation.
+2025-08-18 13:47:01 - Reusing cached access token.
+2025-08-18 13:47:01 - Loaded 5 seen scan IDs from file
+2025-08-18 13:47:01 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:01 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:47:01 - Queried API is called.
+2025-08-18 13:47:01 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:01 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:01 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:47:01 - Scans fetched successfully. Count: 0
+2025-08-18 13:47:01 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:47:16 - Starting mailer invocation.
+2025-08-18 13:47:16 - Reusing cached access token.
+2025-08-18 13:47:16 - Loaded 5 seen scan IDs from file
+2025-08-18 13:47:16 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:16 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:47:16 - Queried API is called.
+2025-08-18 13:47:16 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:16 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:16 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:47:16 - Scans fetched successfully. Count: 0
+2025-08-18 13:47:16 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:47:31 - Starting mailer invocation.
+2025-08-18 13:47:31 - Reusing cached access token.
+2025-08-18 13:47:31 - Loaded 5 seen scan IDs from file
+2025-08-18 13:47:31 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:31 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:47:31 - Queried API is called.
+2025-08-18 13:47:31 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:31 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:31 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:47:31 - Scans fetched successfully. Count: 0
+2025-08-18 13:47:31 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:47:46 - Starting mailer invocation.
+2025-08-18 13:47:46 - Reusing cached access token.
+2025-08-18 13:47:47 - Loaded 5 seen scan IDs from file
+2025-08-18 13:47:47 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:47 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:47:47 - Queried API is called.
+2025-08-18 13:47:47 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:47 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:47:47 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:47:47 - Scans fetched successfully. Count: 0
+2025-08-18 13:47:47 - No scans found from API. Timestamp will remain unchanged.
+2025-08-18 13:48:02 - Starting mailer invocation.
+2025-08-18 13:48:02 - Reusing cached access token.
+2025-08-18 13:48:02 - Loaded 5 seen scan IDs from file
+2025-08-18 13:48:02 - Using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:48:02 - Using from-date (Local): 2025-08-18 13:12:28
+2025-08-18 13:48:02 - Queried API is called.
+2025-08-18 13:48:02 - DEBUG: API call using from-date (UTC): 2025-08-18T07:42:28.114818Z
+2025-08-18 13:48:02 - DEBUG: full URI = https://ind.ast.checkmarx.net/api/scans?statuses=Failed,Completed,Partial&from-date=2025-08-18T07:42:28.114818Z
+2025-08-18 13:48:02 - List of completed scans fetched successfully. Count: 0
+2025-08-18 13:48:02 - Scans fetched successfully. Count: 0
+2025-08-18 13:48:02 - No scans found from API. Timestamp will remain unchanged.

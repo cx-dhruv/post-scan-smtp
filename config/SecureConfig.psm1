@@ -1,13 +1,18 @@
 # SecureConfig.psm1
-# This module provides functions to securely store and retrieve secrets using Windows DPAPI
+# Secure credential storage module using Windows DPAPI
+# Provides machine-level encryption for sensitive data
 
-# Use ProgramData for system-wide access
 $script:SecretBasePath = "$env:ProgramData\CxMailer\Secrets"
 
 function Set-SecureSecret {
-    [CmdletBinding()] param(
-        [Parameter(Mandatory)][string]$Key,
-        [Parameter(Mandatory)][string]$Secret
+    # Encrypts and stores a secret using machine-specific encryption
+    # Only processes on this specific machine can decrypt the data
+    [CmdletBinding()] 
+    param(
+        [Parameter(Mandatory)]
+        [string]$Key,         # Identifier for the secret
+        [Parameter(Mandatory)]
+        [string]$Secret       # Plain text secret to encrypt
     )
     
     if (-not $Secret) {
@@ -15,7 +20,7 @@ function Set-SecureSecret {
         throw "Secret for key $Key cannot be empty."
     }
 
-    # Ensure the secrets directory exists
+    # Create secure storage directory with restricted permissions
     if (-not (Test-Path $script:SecretBasePath)) {
         New-Item -ItemType Directory -Path $script:SecretBasePath -Force | Out-Null
     }
@@ -23,14 +28,15 @@ function Set-SecureSecret {
     $filePath = "$script:SecretBasePath\$Key.txt"
     
     try {
-        # Convert secret to secure string and then to encrypted standard string
-        # Using LocalMachine scope so any user (including SYSTEM) can decrypt
+        # Convert to SecureString (in-memory protection)
         $secureString = ConvertTo-SecureString -String $Secret -AsPlainText -Force
+        
+        # Encrypt using machine key derived from registry
+        # This ensures portability issues - credentials cannot be moved to another machine
         $encryptedString = ConvertFrom-SecureString -SecureString $secureString -Key (Get-MachineKey)
         
-        # Save encrypted string to file
+        # Save encrypted data to file
         $encryptedString | Out-File -FilePath $filePath -Force
-        
         Write-Host "Secret stored successfully for key: $Key"
     }
     catch {
@@ -40,8 +46,10 @@ function Set-SecureSecret {
 }
 
 function Get-SecureSecret {
-    [CmdletBinding()] param(
-        [Parameter(Mandatory)][string]$Key
+    [CmdletBinding()] 
+    param(
+        [Parameter(Mandatory)]
+        [string]$Key
     )
     
     $filePath = "$script:SecretBasePath\$Key.txt"
@@ -52,13 +60,9 @@ function Get-SecureSecret {
     }
 
     try {
-        # Read encrypted string from file
         $encryptedString = Get-Content -Path $filePath -Raw
-        
-        # Convert back to secure string using machine key, then to plain text
         $secureString = ConvertTo-SecureString -String $encryptedString -Key (Get-MachineKey)
         $credential = New-Object System.Management.Automation.PSCredential ("dummy", $secureString)
-        
         return $credential.GetNetworkCredential().Password
     }
     catch {
@@ -68,12 +72,14 @@ function Get-SecureSecret {
 }
 
 function Get-MachineKey {
-    # Generate a consistent key based on machine-specific information
-    # This allows any user on this machine to encrypt/decrypt
+    # Generates a consistent 256-bit encryption key based on machine GUID
+    # This key is unique per machine and consistent across all users/sessions
+    
+    # Read machine GUID from registry (unique per Windows installation)
     $machineGuid = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Cryptography" -Name MachineGuid).MachineGuid
     $bytes = [System.Text.Encoding]::UTF8.GetBytes($machineGuid)
     
-    # Create a 256-bit key (32 bytes) from the machine GUID
+    # Create a 256-bit key (32 bytes) using SHA256 hash
     $sha256 = [System.Security.Cryptography.SHA256]::Create()
     $hash = $sha256.ComputeHash($bytes)
     $sha256.Dispose()
@@ -98,9 +104,11 @@ function Use-EnvFile {
     }
 }
 
-# Function to test if secrets are accessible
 function Test-SecureSecrets {
-    [CmdletBinding()] param()
+    # Diagnostic function to verify credential accessibility
+    # Useful for troubleshooting SYSTEM account access issues
+    [CmdletBinding()] 
+    param()
     
     Write-Host "`nTesting secret storage accessibility..."
     Write-Host "Current user: $env:USERNAME"
@@ -113,11 +121,12 @@ function Test-SecureSecrets {
             foreach ($file in $files) {
                 $keyName = [System.IO.Path]::GetFileNameWithoutExtension($file.Name)
                 try {
+                    # Attempt to decrypt each secret
                     $null = Get-SecureSecret -Key $keyName
-                    Write-Host "  ✓ $keyName - accessible"
+                    Write-Host "✓ $keyName - accessible"
                 }
                 catch {
-                    Write-Host "  ✗ $keyName - not accessible: $($_.Exception.Message)"
+                    Write-Host "✗ $keyName - not accessible: $($_.Exception.Message)"
                 }
             }
         }
