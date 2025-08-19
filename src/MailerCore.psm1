@@ -272,6 +272,10 @@ function Get-CxScanDetails {
     try {
         $details = Invoke-RestMethod -Uri $uri -Headers $headers
         Write-Log "Scan details fetched successfully for $ScanId"
+        
+        # Log the actual structure for debugging
+        Write-Log "DEBUG: Scan details structure: $($details | ConvertTo-Json -Compress -Depth 2)"
+        
         return $details
     }
     catch {
@@ -289,6 +293,31 @@ function Send-SecureMail {
         throw "SMTP server is not configured."
     }
     try {
+        # Convert images to base64 for inline embedding
+        $adPortsImagePath = "$PSScriptRoot\..\templates\static_assets\AD-Ports-Group.png"
+        $checkmarxImagePath = "$PSScriptRoot\..\templates\static_assets\Checkmarx_Logov1.jpg"
+        
+        # Read and encode images
+        if (Test-Path $adPortsImagePath) {
+            $adPortsBytes = [System.IO.File]::ReadAllBytes($adPortsImagePath)
+            $adPortsBase64 = [Convert]::ToBase64String($adPortsBytes)
+            $adPortsDataUri = "data:image/png;base64,$adPortsBase64"
+            $BodyHtml = $BodyHtml -replace 'src="cid:logo1"', "src=`"$adPortsDataUri`""
+            Write-Log "Embedded AD-Ports logo"
+        } else {
+            Write-Log "Warning: AD-Ports logo not found at $adPortsImagePath"
+        }
+        
+        if (Test-Path $checkmarxImagePath) {
+            $checkmarxBytes = [System.IO.File]::ReadAllBytes($checkmarxImagePath)
+            $checkmarxBase64 = [Convert]::ToBase64String($checkmarxBytes)
+            $checkmarxDataUri = "data:image/jpeg;base64,$checkmarxBase64"
+            $BodyHtml = $BodyHtml -replace 'src="cid:logo2"', "src=`"$checkmarxDataUri`""
+            Write-Log "Embedded Checkmarx logo"
+        } else {
+            Write-Log "Warning: Checkmarx logo not found at $checkmarxImagePath"
+        }
+        
         $username = Get-SecureSecret "smtp-username"
         $passwordPlain = Get-SecureSecret "smtp-password"
         $securePassword = $passwordPlain | ConvertTo-SecureString -AsPlainText -Force
@@ -368,13 +397,42 @@ function Invoke-Mailer {
             # Fetch detailed scan information including vulnerability statistics
             $details = Get-CxScanDetails $Config $token $scan.id
             
+            # Extract risk score and statistics with safe navigation
+            $riskScore = if ($details.PSObject.Properties['riskScore']) { 
+                $details.riskScore 
+            } elseif ($details.PSObject.Properties['totalRiskScore']) { 
+                $details.totalRiskScore 
+            } elseif ($details.PSObject.Properties['risk']) { 
+                $details.risk 
+            } else { 
+                "N/A" 
+            }
+            
+            # Extract statistics/summary with safe navigation
+            $summary = if ($details.PSObject.Properties['statistics']) {
+                $details.statistics | ConvertTo-Json -Compress
+            } elseif ($details.PSObject.Properties['summary']) {
+                $details.summary | ConvertTo-Json -Compress
+            } elseif ($details.PSObject.Properties['vulnerabilities']) {
+                @{
+                    high = ($details.vulnerabilities | Where-Object { $_.severity -eq 'High' }).Count
+                    medium = ($details.vulnerabilities | Where-Object { $_.severity -eq 'Medium' }).Count
+                    low = ($details.vulnerabilities | Where-Object { $_.severity -eq 'Low' }).Count
+                    info = ($details.vulnerabilities | Where-Object { $_.severity -eq 'Info' }).Count
+                } | ConvertTo-Json -Compress
+            } else {
+                "No vulnerability details available"
+            }
+            
+            Write-Log "Risk Score: $riskScore, Summary: $summary"
+            
             # Generate HTML email body from template with XSS-safe encoding
             $localNow = (Get-Date).ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss")
             $body = Get-EncodedTemplate "$PSScriptRoot\..\templates\notification_template.html" @{
                 Project   = $details.projectName
                 Status    = $scan.status
-                RiskScore = $details.riskScore
-                Summary   = ($details.statistics | ConvertTo-Json -Compress)
+                RiskScore = $riskScore
+                Summary   = $summary
                 TimeUtc   = $localNow
             }
             
@@ -421,4 +479,4 @@ function Invoke-Mailer {
     Write-Log "Mailer invocation completed."
 }
 
-Export-ModuleMember -Function Invoke-Mailer
+Export-ModuleMember -Function Invoke-Mailer, Send-SecureMail, Get-EncodedTemplate, Write-Log
